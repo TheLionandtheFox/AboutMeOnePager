@@ -23,6 +23,29 @@ body {
     margin: 0;
 }
 
+/* Navigation*/
+.navi {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.navi a {
+    text-decoration:none;
+    color: var(--text);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: color 0.3 ease;
+}
+
+.navi a:hover, 
+.navi a:focus {
+    color: var(--primary);
+}
+
 /* Banner */
 .banner img {
     width: 100%;
