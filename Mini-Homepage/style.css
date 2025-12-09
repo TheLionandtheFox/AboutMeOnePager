@@ -41,3 +41,16 @@ nav li {
 nav a:hover {
   color: #ffc107;
 }
+
+.profil {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.profil img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
+}
