@@ -1,0 +1,43 @@
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.site {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+header {
+  color: white;
+  background-color: #333;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+nav ul{
+  display: flex;
+  list-style: none; /*tut aufzählungspunkte weg*/
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+  padding: 10px 5px;
+}
+
+nav li {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: #ffc107;
+}
