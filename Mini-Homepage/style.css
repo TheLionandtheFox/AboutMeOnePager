@@ -54,3 +54,28 @@ nav a:hover {
   height: 150px;
   margin-bottom: 15px;
 }
+
+.projekte h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.projektbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.projekt {
+    width: 250px;
+    text-align: left;
+    padding: 20px 0;
+}
+
+.projekt img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
