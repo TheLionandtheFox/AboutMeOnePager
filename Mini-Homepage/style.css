@@ -104,5 +104,13 @@ button {
   color: white;
   padding: 10px;
   border: none;
-  
+  border-radius: 5px;
+  font-size: inherit;
+  cursor: pointer;
+  align-self: flex-start;
+  width: auto;
+}
+
+button:hover {
+  background-color: #ffc107;
 }
