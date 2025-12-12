@@ -126,6 +126,10 @@ footer {
 
 @media (max-width: 600px) {
   .projektbox {
-    flex-direction
+    flex-direction: column;
+    align-items: center;
+  }
+  .projekt {
+    flex: 1 1 100%;
   }
 }
