@@ -20,7 +20,7 @@ Eine Auflistung der wichtigsten Tools und Frameworks, die in meinen Projekten ve
 Eine Auflistung der wichtigsten Tools und Frameworks, die ich in mein Portfolio noch aufnehmen werde:
 
 * **Frontend:** React.js, Tailwind
-* **Backend:** Node.js, PHP, Java, JavaScript
+* **Backend:** Node.js, PHP, Java, JavaScript, Vue.js
 * **Datenbank:** MongoDB
 * **Tools:** Webpack, Figma
 
@@ -101,6 +101,19 @@ Wenn Sie das Projekt lokal ausführen möchten, folgen Sie bitte diesen Schritte
 **Alle Rechte an den hier erstellten, originalen Code-Dateien und der Struktur liegen bei mir. Bilder und weiteres unterliegen den angegebenen Personen.**
 
 *Hinweis zu externen Inhalten: Sollte das Projekt externe Bibliotheken, Bilder oder Ressourcen nutzen, deren Lizenzen dies erfordern, werden diese hier oder in der `LICENSE`-Datei entsprechend den jeweiligen Bedingungen aufgeführt und referenziert.*
+
+---
+
+* **LICENSE**
+
+Einige der in diesem Projekt verwendeten Bilder stammen von (FreePik) [https://de.freepik.com/]. Die Nutzung erfolgt gemäß den kostenlosen Lizenzbedingungen, welche eine Namensnennung des Urhebers erfordern.
+
+* **Urheber**
+Ich verwende Bilder, die unter der Freepik-Lizenz stehen und von den jeweiligen Urhebern zur Verfügung gestellt wurden:
+
+* **(wayhomestudio)** auf [https://de.freepik.com/autor/wayhomestudio]
+
+Die genauen Bedingungen finden sich in den Freepik Nutzungsbedingungen.
 
 ---
 
