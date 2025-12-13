@@ -106,12 +106,12 @@ Wenn Sie das Projekt lokal ausführen möchten, folgen Sie bitte diesen Schritte
 
 * **LICENSE**
 
-Einige der in diesem Projekt verwendeten Bilder stammen von [FreePik] (https://de.freepik.com/). Die Nutzung erfolgt gemäß den kostenlosen Lizenzbedingungen, welche eine Namensnennung des Urhebers erfordern.
+Einige der in diesem Projekt verwendeten Bilder stammen von [FreePik](https://de.freepik.com/). Die Nutzung erfolgt gemäß den kostenlosen Lizenzbedingungen, welche eine Namensnennung des Urhebers erfordern.
 
 * **Urheber**
 Ich verwende Bilder, die unter der Freepik-Lizenz stehen und von den jeweiligen Urhebern zur Verfügung gestellt wurden:
 
-* **[wayhomestudio]** auf (https://de.freepik.com/autor/wayhomestudio)
+* **wayhomestudio** auf [Freepik](https://de.freepik.com/autor/wayhomestudio)
 
 Die genauen Bedingungen finden sich in den Freepik Nutzungsbedingungen.
 
