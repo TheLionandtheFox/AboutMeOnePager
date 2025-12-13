@@ -106,12 +106,12 @@ Wenn Sie das Projekt lokal ausführen möchten, folgen Sie bitte diesen Schritte
 
 * **LICENSE**
 
-Einige der in diesem Projekt verwendeten Bilder stammen von (FreePik) [https://de.freepik.com/]. Die Nutzung erfolgt gemäß den kostenlosen Lizenzbedingungen, welche eine Namensnennung des Urhebers erfordern.
+Einige der in diesem Projekt verwendeten Bilder stammen von [FreePik] (https://de.freepik.com/). Die Nutzung erfolgt gemäß den kostenlosen Lizenzbedingungen, welche eine Namensnennung des Urhebers erfordern.
 
 * **Urheber**
 Ich verwende Bilder, die unter der Freepik-Lizenz stehen und von den jeweiligen Urhebern zur Verfügung gestellt wurden:
 
-* **(wayhomestudio)** auf [https://de.freepik.com/autor/wayhomestudio]
+* **[wayhomestudio]** auf (https://de.freepik.com/autor/wayhomestudio)
 
 Die genauen Bedingungen finden sich in den Freepik Nutzungsbedingungen.
 
@@ -119,10 +119,10 @@ Die genauen Bedingungen finden sich in den Freepik Nutzungsbedingungen.
 
 ## Kontakt
 
-[Olias] – [reddogdigging@gmail.com]
+* [Olias] - [reddogdigging@gmail.com]
 
-[https://www.linkedin.com/in/olias-dagner-701b10348/]
+* [LinkedIn](https://www.linkedin.com/in/olias-dagner-701b10348/)
 
-[[Link zu meiner persönlichen Portfolio-Website]](https://lionandthefox.pages.dev/)
+* [Link zu meiner persönlichen Portfolio-Website](https://lionandthefox.pages.dev/)
 
 ---
