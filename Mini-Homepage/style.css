@@ -1,0 +1,135 @@
+body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.site {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+header {
+  color: white;
+  background-color: #333;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+nav ul{
+  display: flex;
+  list-style: none; /*tut aufzählungspunkte weg*/
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+  padding: 10px 5px;
+}
+
+nav li {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: #ffc107;
+}
+
+.profil {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.profil img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+.projekte h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.projektbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.projekt {
+    width: 250px;
+    text-align: left;
+    padding: 20px 0;
+}
+
+.projekt img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+kontakt h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: gray;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: inherit;
+  cursor: pointer;
+  align-self: flex-start;
+  width: auto;
+}
+
+button:hover {
+  background-color: #ffc107;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  font-size: .9em;
+  padding: 20px 0;
+  background-color: #333;
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .projektbox {
+    flex-direction: column;
+    align-items: center;
+  }
+  .projekt {
+    flex: 1 1 100%;
+  }
+}

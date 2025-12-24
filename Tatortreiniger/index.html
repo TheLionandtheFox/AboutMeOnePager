@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatortreiniger - Wir wischen, was keiner sehen will</title>
+    <!-- ================= verlinkungen =================  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="Fontawesome/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- ================= Header================= -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-broom" aria-hidden="true"></i>
+            <span>Tatortreiniger - Wish und weg</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Leistungen</a></li>
+                <li><a href="#">Preise</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- ================= Hero Slider =================  -->
+        <section class="hero">
+            <!-- ================= Hintergrund Bilder =================  -->
+            <div class="hero-slider">
+                <div class="hero-slide active" style="background-image: url('img/gelbputzenfrau.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('img/ohapinkfrau.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('img/haushalterin.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('img/reinigungswerkzeuggelb.jpg');"></div>
+            </div>
+
+            <!-- ================= Glas Effekt Overlay =================  -->
+            <div class="hero-glas"></div>
+
+            <!-- ================= Hero Slider =================  -->
+            <div class="hero-content">
+                <h1>Willkommen bei Tatortreiniger</h1>
+                <p>Wir wischen, was keiner sehen will</p>
+                <a href="#leistungen" class="hero-btn">Mehr erfahren</a>
+            </div>
+
+            <!-- ================= Dots ================= -->
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+        <!-- ================= Content ================= -->
+        <section class="firstcontent">
+            <h2>Wir sind eure Putzfeen - Wish und weg</h2>
+            <p>Tatortreiniger mit Leidenschaft. 100% Professionalität.
+                Wir beseitigen, was andere lieber *nicht* sehen wollen.
+                Schnell, diskret und mit einem Freude ... meistens.
+                Aber wir lieben es euch Glücklich zu machen.</p>
+        </section>
+
+        <!-- ================= CARDS ================= -->
+        <section class="cards" id="preise">
+            <div class="cardsingle">
+                <h3>Kleine Sauerei</h3>
+                <p>Für die Fälle, bei dennen nur etwas daneben ging.
+                    Ideal für kleine Einsätze.
+                </p>
+                <div class="price">ab 149€</div>
+            </div>
+
+            <div class="cardsingle">
+                <h3>Mittlerer Chaos</h3>
+                <p>Wenn es bereits unangenehm wird und das Haus nur
+                    noch mit einem würgen betretten wird.</p>
+                <div class="price">ab 399€</div>
+            </div>
+
+            <div class="cardsingle">
+                <h3>Komplettes Disaster</h3>
+                <p>Hier weigert man sich das Gebäude zu betretten. Großflächige
+                    Reinigung Spezialdesinfektion und Geruchsbeseitigung.
+                </p>
+                <div class="price">ab 999€</div>
+            </div>
+
+        </section>
+
+
+        <!-- ================= Vertrauen ================= -->
+        <section class="trust">
+            <h2>Auf uns können sie bauen</h2>
+
+            <div class="trustgrid">
+
+                <div class="trustitems">
+                    <i class="bi bi-clock-history" aria-hidden="true"></i>
+                    <p>24/7 erreichbar - auch an Wochenenden.</p>
+                </div>
+
+                <div class="trustitems">
+                    <i class="bi bi-shield-lock" aria-hidden="true"></i>
+                    <p>
+                        Diskret und absolute Vertraulich
+                    </p>
+                </div>
+
+                <div class="trustitems">
+                    <i class="bi bi-patch-check"></i>
+                    <p>Professionelle Reinigungs- & Desinfektionsmittel</p>
+                </div>
+
+                <div class="trustitems">
+                    <i class="bi bi-building-check" aria-hidden="true"></i>
+                    <p>30 Jahre Erfahrung. Über 1000 Mitarbeiter.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+        <!-- ================= CARDS ================= -->
+
+    </main>
+    <!-- ================= Footer =================  -->
+    <footer>
+        <div class="fcontainer">
+            <p class="finfo">Created by <span class="fhighlight">Mulder</span></p>
+
+            <span class="fdivider" aria-hidden="true">|</span>
+            <p class="fcredits">
+                <a href="https://www.freepik.com" target="_blank" rel="noopener"
+                    aria-label="Bilder von Freepik werden ihm neuen Tab geöffnet">
+                    Pictures by Freepik
+                </a>
+            </p>
+        </div>
+    </footer>
+    <!-- ================= Slide Script =================  -->
+    <script>
+        /* Hier noch ein Script für den Slider
+        definierung der Variablen */
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.hero-slide');
+            const dots = document.querySelectorAll('.dot');
+            let currentIndex = 0;
+            let slideInterval;
+
+            //Funktionen für Wechsel der Slides
+            function showSlide(index) {
+
+                // active wird von den Bildern entfernt
+                slides.forEach(s => s.classList.remove('active'));
+                dots.forEach(d => d.classList.remove('active'));
+
+                // Setzt active nur beim neuen Index
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+
+                // aktualisiert den aktuellen Index
+                currentIndex = index;
+            }
+
+            // Funkiton für automatischen Wechsel
+            function nextSlide() {
+                let next = (currentIndex + 1) % slides.length;
+                showSlide(next);
+            }
+
+            // start des Slides
+            slideInterval = setInterval(nextSlide, 3000);
+
+            // Event Listener für Dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+
+                    // Reset des Times und neustart
+                    clearInterval(slideInterval);
+                    slideInterval = setInterval(nextSlide, 3000);
+                });
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

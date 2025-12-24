@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="hero">
+        <!-- Navigation -->
+
+        <nav>
+            <div class="nav-container">
+                <ul class="navi">
+                    <li><a href="#">Start</a></li>
+                    <li><a href="#">Über uns</a></li>
+                    <li><a href="#">Leistungen</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <div class="banner">
+            <img src="image/bild.png" alt="Banner">
+        </div>
+        <h1>Portfolio</h1>
+        <p>Programmierer mit Fokus und sauberem Design.</p>
+        <a class="btn" href="#projects">Projekte ansehen</a>
+    </header>
+    <main> <!-- About Me -->
+        <section class="about">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div>
+                    <p>
+                        Ich bin ein leidenschaftlicher Entwickler mit Fokus auf saubere Architektur,
+                        effiziente Workflows und elegante UI/UX-Konzepte. Mein Antrieb ist es,
+                        digitale Produkte mit Klarheit, Struktur und Ästhetik zu erschaffen.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Neben dem Programmieren beschäftige ich mich intensiv mit Designprinzipien,
+                        moderner Softwareentwicklung und kreativen Projekten.
+                        Ich arbeite strukturiert, lösungsorientiert und mit starkem Blick für Details.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="skills">
+            <h2>Skills</h2>
+
+            <div class="skill">
+                <span>Python</span>
+                <div class="bar">
+                    <div style="width: 90%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span>Java</span>
+                <div class="bar">
+                    <div style="width: 75%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span>HTML / CSS</span>
+                <div class="bar">
+                    <div style="width: 95%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <span>SQL</span>
+                <div class="bar">
+                    <div style="width: 70%"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projekte Cards -->
+
+        <section id="projects" class="projects">
+            <h2>Projekte</h2>
+
+            <div class="project-card">
+                <h3>Responsive Grid Layout</h3>
+                <p>Ein flexibles CSS-Grid-System ohne Framework.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Dark-Mode Landingpage</h3>
+                <p>Ein cleanes UI mit CSS-Variablen und Theme-Switch.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Animated Components</h3>
+                <p>Elegante, performante Animationen mit CSS keyframes.</p>
+            </div>
+        </section>
+        <!-- Kontaktformular -->
+        <section class="contact">
+            <h2>Kontakt</h2>
+
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="E-Mail" required>
+                <textarea placeholder="Nachricht" required></textarea>
+                <div class="button-container">
+                    <button type="submit">Absenden</button>
+                    <button type="reset">Abbrechen</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
