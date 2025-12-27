@@ -55,13 +55,18 @@ Es umschließt alle anderen Elemente einer Webseite (außer der `<!DOCTYPE html>
         <head> </head>
     </html>
 
-- **`<body>`**: Umschließt den gesamten sichtbaren Inhalt der Webseite.
+- **`<body>`**: Umschließt den gesamten sichtbaren Inhalt der Webseite, wie Texte, Überschriften, Bilder, Links, Videos, Tabellen, Listen usw. Er fungiert als Container für alles, was der Besucher der Website sieht.
 
 ## 2. Text-Strukturierung & Semantik
 
 Diese Tags geben dem Inhalt Bedeutung und helfen Suchmaschinen (SEO):
 
-- `<h1>` bis `<h6>`: Überschriften (h1 ist die wichtigste).
+- **`<h1>` bis `<h6>`**: Für Überschriften. h1 ist die wichtigste und sollte nur einmal pro Seite verwendet werden, da sie das Hauptthema darstellt. Die Reihenfolge h1-h6 muss logisch eingehalten werden, um die Struktur für Nutzer und Suchmaschinen zu wahren (z. B. H2 als Unterpunkt von H1, H3 als Unterpunkt von H2) – man darf nicht überspringen oder rückwärts springen (h2 und danach h4 geht nicht). Bei neuen Sektionen beginnt man einfach mit der nächsten logischen Ebene (wieder mit h2 und danach mit h3) und folgt dann wieder der Reihenfolge.
+Regeln für Überschriften h1-h6:
+**h1 Einmal pro Seite**: Die wichtigste Überschrift, der Titel der Seite, sollte nur einmal vorkommen, um das Hauptthema klar zu definieren.
+**Logische Hierarchie (h2-h6)**: Muss man der Reihenfolge folgen. Ein h2 ist unter h2, danach kommt h3 und so weiter. Vermeide Sprünge wie h2 -> h4.
+**Häufigkeit**: h2, h3, h4 usw. können mehrmals verwendet werden, solange es der Struktur dient. Oft reichen h1-h3 für die meisten Seiten aus. Ein h2 nach einem zB. h4 nur benutzen, wenn es neue Section anfängt.
+
 - `<p>`: Definiert einen Textabsatz (Paragraph).
 - `<strong>`: Hebt Text fett hervor (starke semantische Betonung).
 - `<em>`: Hebt Text kursiv hervor (Akzentuierung).
