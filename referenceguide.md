@@ -123,8 +123,17 @@ Regeln für Überschriften h1-h6:
 ## 4. Medien & Container
 
 - `<img>`: Bindet ein Bild ein (`src` und `alt` sind Pflicht).
-- `<div>`: Allgemeiner Block-Container für Layout und CSS.
-- `<span>`: Inline-Container für Textabschnitte.
+
+    <img src="pfad/zum/bild.jpg" alt="Beschreibung des Bildes">
+
+- `<div>`:  Der `<div>` Tag ist ein universeller Container, um andere HTML-Elemente zu gruppieren und logische Abschnitte auf einer Webseite zu erstellen, die dann mittels CSS gestylt oder mit JavaScript manipuliert werden können. Er hat keine eigene semantische Bedeutung, dient rein der Strukturierung und ist besonders nützlich für Layouts (z. B. mit Flexbox/Grid). Ohne Styling ist ein `<div>` unsichtbar (der `<div>`, nicht sein Inhalt!), wird aber als Block-Element behandelt, was einen Zeilenumbruch erzeugt und die volle Breite einnimmt
+
+    <div class="produkt-box">
+        <h2>Produkt A</h2>
+        <p>Beschreibung von Produkt A.</p>
+    </div>
+
+- `<span>`: Ist dafür da um generischer Inline-Container für Textabschnitte ohne visuelle Veränderung zu markieren, damit sie mit CSS gestylt (Farbe, Schriftgröße) oder mit JavaScript manipuliert werden können, ohne den Textfluss zu unterbrechen (im Gegensatz zu Block-Elementen wie `<div>`). Sie funktionieren wie ein "Haken" (Hook) für gezielte Formatierungen innerhalb einer Zeile oder eines Absatzes
 
 ## 5. Semantische HTML5-Tags (Layout)
 
