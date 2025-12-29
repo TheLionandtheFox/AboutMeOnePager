@@ -92,16 +92,33 @@ Regeln für Überschriften h1-h6:
 
 - `<p>`: Definiert einen Textabsatz (Paragraph).
 - `<strong>`: Hebt Text fett hervor (starke semantische Betonung).
-- `<em>`: Hebt Text kursiv hervor (Akzentuierung).
+- `<em>`: Hebt Text kursiv hervor (Akzentuierung). Screenreader erkennen es und können die Betonung auch hörbar machen
 - `<br>`: Erzwingt einen Zeilenumbruch (selbstschließendes Tag).
-- `<hr>`: Zeichnet eine horizontale Linie zur thematischen Trennung.
+- `<hr>`: Zeichnet eine horizontale Linie zur Trennung.
 
 ## 3. Listen & Verweise
 
 - `<a>`: Erstellt einen Hyperlink (Attribut `href` erforderlich).
+
+    <p>Diese Seite <a href="https://www.seite.de">Link Name</a> ist verllinkt.</p>
+
 - `<ul>`: Ungeordnete Liste.
+
+    <ul>
+        <li>Apfel</li>
+        <li>Hundefutter</li>
+        <li>Batterien</li>
+    </ul>
+
 - `<ol>`: Geordnete Liste.
-- `<li>`: Einzelnes Listenelement.
+
+    <ol>
+        <li>Erster Schritt</li>
+        <li>Zweiter Schritt</li>
+        <li>Dritter Schritt</li>
+    </ol>
+
+- `<li>`: Einzelnes Listenelement. `<li>`-Elemente innerhalb von `<ul>` oder `<ol>` verwenden.
 
 ## 4. Medien & Container
 
