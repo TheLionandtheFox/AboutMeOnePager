@@ -86,6 +86,58 @@ Enthält Metainformationen (Titel, Scripte, CSS-Links), die nicht direkt auf der
 </html>
 ```
 
+## Meta-Informationen & SEO
+
+Diese Tags befinden sich im `<head>`-Bereich des HTML-Dokuments. Sie sind für den Besucher unsichtbar, aber essenziell für die Kommunikation mit Suchmaschinen und dem Browser.
+
+### `<title>`
+
+Legt den Titel der Webseite fest, der im Browser-Tab und als Hauptüberschrift in den Suchergebnissen erscheint. Er ist das wichtigste HTML-Element, um Suchmaschinen das Thema der Seite zu signalisieren.
+
+```html
+<title>HTML Glossar: SEO-Tags richtig nutzen</title>
+```
+
+### `<meta name="description">`
+
+Enthält eine kurze Zusammenfassung des Inhalts. Suchmaschinen nutzen diesen Text für das Snippet in den Suchergebnissen. Er dient als Werbetext, um die Klickrate (CTR) der Nutzer zu erhöhen.
+
+```html
+<meta name="description" content="Ein umfassendes Glossar über HTML-Tags, die Ihre Suchmaschinenoptimierung verbessern.">
+```
+
+### `<meta name="viewport">`
+
+Dieser Tag ist zwingend erforderlich für das responsive Design. Er sorgt dafür, dass die Webseite auf Mobilgeräten korrekt skaliert wird, was ein kritischer Rankingfaktor für Google ist.
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+### `<meta name="robots">`
+
+Gibt Anweisungen an Suchmaschinen-Crawler, ob eine Seite indexiert werden soll oder ob Links auf der Seite verfolgt werden dürfen.
+
+```html
+<meta name="robots" content="index, follow">
+```
+
+### `<link rel="canonical">`
+
+Verweist auf die Original-URL einer Webseite. Dies verhindert Probleme mit doppeltem Inhalt (Duplicate Content), indem es Google mitteilt, welche Version der Seite in den Suchindex gehört.
+
+```html
+<link rel="canonical" href="https://www.deineseite.de">
+```
+
+### `<meta charset="UTF-8">`
+
+Legt die Zeichenkodierung fest. Dies stellt sicher, dass Umlaute und Sonderzeichen weltweit in jedem Browser korrekt dargestellt werden und verhindert Darstellungsfehler.
+
+```html
+<meta charset="UTF-8">
+```
+
 ### `<body>`-Tag
 
 Umschließt den gesamten sichtbaren Inhalt der Webseite, wie Texte, Überschriften, Bilder, Links, Videos, Tabellen, Listen usw. Er fungiert als Container für alles, was der Besucher der Website sieht.
@@ -179,7 +231,7 @@ Einzelnes Listenelement. `<li>`-Elemente werden innerhalb von `<ul>` oder `<ol>`
 
 ---
 
-## 4. Medien & Container
+## 5. Medien & Container
 
 ### Bilder: `<img>`
 
@@ -214,70 +266,255 @@ Im Gegensatz zu Block-Elementen wie `<div>`, bleibt der `<span>` in derselben Ze
 
 ---
 
-## 5. Semantische HTML-Tags (Layout)
+
+
+## 6. Semantische HTML-Tags (Layout)
 
 Diese Tags verbessern Struktur, Barrierefreiheit und SEO (Suchmaschinenoptimierung):
 
 - **`<header>`**: Kopfbereich einer Seite oder eines Abschnitts.
+
+Definiert den Kopfbereich einer Seite oder eines Abschnitts. 
+- Wichtige Merkmale: Enthält meist das Logo, den Seitentitel oder die Hauptnavigation. Er hilft Screenreadern, den Einstiegspunkt der Seite zu finden.
+
+```html
+<header>
+  <h1>Unternehmensname</h1>
+</header>
+```
+
 - **`<nav>`**: Navigationsbereich.
+<nav>
+Markiert einen Bereich, der Navigationslinks enthält.
+
+    Wichtige Merkmale: Wird für Hauptmenüs, Inhaltsverzeichnisse oder Breadcrumbs verwendet. Nicht jeder Link muss in ein <nav>, nur größere Blöcke.
+    Beispiel:
+
+html
+
+<nav>
+  <a href="/home">Home</a>
+  <a href="/shop">Shop</a>
+</nav>
+
+
 - **`<main>`**: Hauptinhalt der Seite.
+
+<main>
+Kennzeichnet den einzigartigen Hauptinhalt des Dokuments.
+
+    Wichtige Merkmale: Darf nur einmal pro Seite vorkommen. Er schließt Header, Footer und Sidebar aus.
+    Beispiel:
+
+html
+
+<main>
+  <h2>Aktuelle Nachrichten</h2>
+  <p>Hier steht der wichtigste Text der Seite.</p>
+</main>
+
 - **`<section>`**: Thematischer Abschnitt.
+
+<section>
+Definiert einen thematisch zusammengehörigen Abschnitt innerhalb eines Dokuments.
+
+    Wichtige Merkmale: Sollte in der Regel eine eigene Überschrift (<h2>-<h6>) haben.
+    Beispiel:
+
+html
+
+<section>
+  <h2>Über uns</h2>
+  <p>Wir sind ein Team aus Entwicklern.</p>
+</section>
+
 - **`<article>`**: Eigenständiger Inhalt (z.B. Blogpost).
+
+<article>
+Stellt einen eigenständigen, in sich geschlossenen Inhalt dar.
+
+    Wichtige Merkmale: Ideal für Blogbeiträge, Zeitungsartikel oder Forenposts, die theoretisch auch alleine auf einer Seite stehen könnten.
+    Beispiel:
+
+html
+
+<article>
+  <h2>Rezept: Apfelkuchen</h2>
+  <p>Zuerst die Äpfel schneiden...</p>
+</article>
+
+
+- **`<aside>`**: ???
+
+<aside>
+Markiert Inhalte, die nur indirekt mit dem Hauptinhalt zu tun haben.
+
+    Wichtige Merkmale: Wird oft für Seitenleisten (Sidebars), Werbebanner oder Glossar-Boxen verwendet.
+    Beispiel:
+
+html
+
+<aside>
+  <h4>Wussten Sie schon?</h4>
+  <p>HTML wurde 1989 erfunden.</p>
+</aside>
+
 - **`<footer>`**: Fußbereich der Seite.
 
----
+<footer>
+Definiert den Fußbereich einer Seite oder eines Abschnitts.
 
-## 6. Meta-Informationen & SEO
+    Wichtige Merkmale: Enthält oft Copyright-Infos, Kontaktlinks oder rechtliche Hinweise (Impressum).
+    Beispiel:
 
-Diese Tags befinden sich im `<head>`-Bereich des HTML-Dokuments. Sie sind für den Besucher unsichtbar, aber essenziell für die Kommunikation mit Suchmaschinen und dem Browser.
+html
 
-### `<title>`
+<footer>
+  <p>&copy; 2025 Mein Blog</p>
+</footer>
 
-Legt den Titel der Webseite fest, der im Browser-Tab und als Hauptüberschrift in den Suchergebnissen erscheint. Er ist das wichtigste HTML-Element, um Suchmaschinen das Thema der Seite zu signalisieren.
+<form>
+Erstellt einen Bereich für Benutzereingaben (Formulare).
 
-```html
-<title>HTML Glossar: SEO-Tags richtig nutzen</title>
-```
+    Wichtige Merkmale: Nutzt Attribute wie action (Ziel des Formulars) und method (get/post), um Daten zu senden.
+    Beispiel:
 
-### `<meta name="description">`
+html
 
-Enthält eine kurze Zusammenfassung des Inhalts. Suchmaschinen nutzen diesen Text für das Snippet in den Suchergebnissen. Er dient als Werbetext, um die Klickrate (CTR) der Nutzer zu erhöhen.
+<form action="/login" method="POST">
+  <!-- Eingabefelder hier -->
+</form>
 
-```html
-<meta name="description" content="Ein umfassendes Glossar über HTML-Tags, die Ihre Suchmaschinenoptimierung verbessern.">
-```
+<input>
+Das wichtigste Element für Dateneingaben innerhalb von Formularen.
 
-### `<meta name="viewport">`
+    Wichtige Merkmale: Ein leeres Tag. Der Typ (type) bestimmt die Funktion (z.B. text, password, checkbox, email).
+    Beispiel:
 
-Dieser Tag ist zwingend erforderlich für das responsive Design. Er sorgt dafür, dass die Webseite auf Mobilgeräten korrekt skaliert wird, was ein kritischer Rankingfaktor für Google ist.
+html
 
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-```
+<input type="text" placeholder="Benutzername">
 
-### `<meta name="robots">`
+<label>
+Definiert eine Beschriftung für ein <input>-Element.
 
-Gibt Anweisungen an Suchmaschinen-Crawler, ob eine Seite indexiert werden soll oder ob Links auf der Seite verfolgt werden dürfen.
+    Wichtige Merkmale: Erhöht die Barrierefreiheit. Wenn man auf das Label klickt, wird das zugehörige Eingabefeld aktiviert.
+    Beispiel:
 
-```html
-<meta name="robots" content="index, follow">
-```
+html
 
-### `<link rel="canonical">`
+<label for="mail">E-Mail:</label>
+<input type="email" id="mail">
 
-Verweist auf die Original-URL einer Webseite. Dies verhindert Probleme mit doppeltem Inhalt (Duplicate Content), indem es Google mitteilt, welche Version der Seite in den Suchindex gehört.
 
-```html
-<link rel="canonical" href="https://www.deineseite.de">
-```
+<button>
+Erstellt eine anklickbare Schaltfläche.
 
-### `<meta charset="UTF-8">`
+    Wichtige Merkmale: Kann Text oder Bilder enthalten. Innerhalb von Formularen sendet er diese standardmäßig ab.
+    Beispiel:
 
-Legt die Zeichenkodierung fest. Dies stellt sicher, dass Umlaute und Sonderzeichen weltweit in jedem Browser korrekt dargestellt werden und verhindert Darstellungsfehler.
+html
 
-```html
-<meta charset="UTF-8">
-```
+<button type="submit">Jetzt absenden</button>
+
+
+<textarea>
+Ein mehrzeiliges Eingabefeld für längere Texte.
+
+    Wichtige Merkmale: Die Größe kann über die Attribute rows und cols oder per CSS gesteuert werden.
+    Beispiel:
+
+html
+
+<textarea rows="4">Geben Sie hier Ihre Nachricht ein.</textarea>
+
+<select> und <option>
+Erstellt eine Dropdown-Auswahlliste.
+
+    Wichtige Merkmale: <select> ist der Container, <option> sind die einzelnen auswäbaren Punkte.
+    Beispiel:
+
+html
+
+<select name="autos">
+  <option value="volvo">Volvo</option>
+  <option value="bmw">BMW</option>
+</select>
+
+<table>
+Das Hauptelement zur Erstellung einer Datentabelle.
+
+    Wichtige Merkmale: Sollte nur für tabellarische Daten genutzt werden, nicht für das Layout der Webseite.
+    Beispiel:
+
+html
+
+<table>
+  <!-- Zeilen und Zellen -->
+</table>
+
+<tr> (Table Row)
+Definiert eine Tabellenzeile.
+
+    Wichtige Merkmale: Enthält entweder Kopfzellen (<th>) oder Datenzellen (<td>).
+    Beispiel:
+
+html
+
+<tr>
+  <td>Max</td>
+  <td>Mustermann</td>
+</tr>
+
+<th> (Table Header)
+Definiert eine Kopfzelle in einer Tabelle.
+
+    Wichtige Merkmale: Der Text wird standardmäßig fett und zentriert dargestellt.
+    Beispiel:
+
+html
+
+<th>Vorname</th>
+
+<td> (Table Data)
+Definiert eine Standard-Datenzelle in einer Tabelle.
+
+    Wichtige Merkmale: Enthält den eigentlichen Inhalt der Tabellenzelle.
+    Beispiel:
+
+html
+
+<td>Max</td>
+
+<iframe>
+Bettet eine andere Webseite oder ein externes Medium (z. B. Google Maps) ein.
+
+    Wichtige Merkmale: Benötigt das src-Attribut. Sicherheitsmerkmale wie sandbox sind oft wichtig.
+    Beispiel:
+
+html
+
+<iframe src="https://www.wikipedia.org" width="500" height="300"></iframe>
+
+<video>
+Dient zum Einbetten von Videodateien ohne externe Player.
+
+    Wichtige Merkmale: Unterstützt Attribute wie controls (Play/Pause-Button), autoplay oder loop.
+    Beispiel:
+
+html
+
+<video src="film.mp4" controls width="400"></video>
+
+<audio>
+Dient zum Einbetten von Tondateien oder Musik.
+
+    Wichtige Merkmale: Ähnlich wie <video>, benötigt meist das controls-Attribut, damit der Nutzer die Wiedergabe starten kann.
+    Beispiel:
+
+html
+
+<audio src="musik.mp3" controls></audio>
 
 ---
 
@@ -336,3 +573,5 @@ Legt die Zeichenkodierung fest. Dies stellt sicher, dass Umlaute und Sonderzeich
 </body>
 </html>
 ```
+
+---
