@@ -1,25 +1,39 @@
 # HTML Erklärt
 
-**Status:** Noch in Arbeit
+> **Status:** Noch in Arbeit
 
 ## Wichtige Merkmale
 
-- **Struktur**:
-Ist ein Baumstruktur mit einem `<html>`-Tag als **Wurzelelement (Root-Element)**. Innerhalb von `<html>` befinden sich immer genau zwei Bereiche:  
-`<head>` (Metadaten) und `<body>` (sichtbare Inhalte).
-Elemente werden durch Tags () definiert, die oft Paare bilden (Start- und End-Tag wie `<p>...</p>`).
-Wichtige semantische Strukturelemente sind Überschriften (`<h1>–<h6>`), Absätze (`<p>`), Listen (`<ul>, <ol>`), Abschnitte (`<section>`) und Navigation (`<nav>`), um Inhalte logisch zu gliedern.
+### Struktur
 
-- **Sprachfestlegung**:  
-Es ist Best Practice, das Attribut `lang` zu verwenden  
-(`<html lang="de">`), um Suchmaschinen und Screenreadern  
-die Sprache der Seite mitzuteilen.
+HTML ist eine Baumstruktur mit einem `<html>`-Tag als **Wurzelelement (Root-Element)**. Innerhalb von `<html>` befinden sich immer genau zwei Bereiche: `<head>` (Metadaten) und `<body>` (sichtbare Inhalte).
 
-- **Pflicht-Elemente**:  
-Jedes gültige HTML5-Dokument **muss** die Elemente `html`, `head` und `body` enthalten. Wenn man es vergisst, ergänzt es der Browser automatisch (si werden nicht automatisch in die Datei eingefügt, sondern nur im Browser intern ergänzt).
-`<!DOCTYPE html>`-Deklaration, die ganz am Anfang der Datei stehen muss, um dem Browser mitzuteilen, dass es sich um HTML5 handelt, und um eine korrekte Darstellung sicherzustellen.
+Elemente werden durch Tags (`< >`) definiert, die oft Paare bilden (Start- und End-Tag wie `<p>...</p>`).
+
+Wichtige semantische Strukturelemente sind:
+- Überschriften (`<h1>` bis `<h6>`)
+- Absätze (`<p>`)
+- Listen (`<ul>`, `<ol>`)
+- Abschnitte (`<section>`)
+- Navigation (`<nav>`)
+
+### Sprachfestlegung
+
+Es ist Best Practice, das Attribut `lang` zu verwenden (`<html lang="de">`), um Suchmaschinen und Screenreadern die Sprache der Seite mitzuteilen.
+
+### Pflicht-Elemente
+
+Jedes gültige HTML5-Dokument **muss** die Elemente `html`, `head` und `body` enthalten. Wenn man sie vergisst, ergänzt sie der Browser automatisch (sie werden nicht automatisch in die Datei eingefügt, sondern nur im Browser intern ergänzt).
+
+Die `<!DOCTYPE html>`-Deklaration muss ganz am Anfang der Datei stehen, um dem Browser mitzuteilen, dass es sich um HTML5 handelt, und um eine korrekte Darstellung sicherzustellen.
+
 Jedes HTML5-Dokument **sollte** die Basisstruktur enthalten:
-`<!DOCTYPE html>`, `<html>`, `<head>` (mit `<meta charset="UTF-8">` und `<title>`), `<body>`, da diese das Dokument definieren, Metadaten (wie den Titel für Browser-Tabs/Suchmaschinen) bereitstellen und den sichtbaren Inhalt umschließen, wobei auch semantische Tags wie `<header>`, `<nav>`, `<main>`, `<footer>` und Überschriften (`<h1>` bis `<h6>`) für Struktur und SEO entscheidend sind.
+- `<!DOCTYPE html>`
+- `<html>`
+- `<head>` (mit `<meta charset="UTF-8">` und `<title>`)
+- `<body>`
+
+Diese Elemente definieren das Dokument, stellen Metadaten bereit (wie den Titel für Browser-Tabs/Suchmaschinen) und umschließen den sichtbaren Inhalt. Auch semantische Tags wie `<header>`, `<nav>`, `<main>`, `<footer>` und Überschriften (`<h1>` bis `<h6>`) sind für Struktur und SEO entscheidend.
 
 ## Übersicht Aufbau
 
@@ -37,53 +51,71 @@ Jedes HTML5-Dokument **sollte** die Basisstruktur enthalten:
 
 ---
 
-1. Grundgerüst (Struktur-Tags)
+## 1. Grundgerüst (Struktur-Tags)
 
-Diese Tags bilden das Skelett jeder Webseite:
+Diese Tags bilden das Skelett jeder Webseite.
 
-## <!DOCTYPE html>
+### `<!DOCTYPE html>`
 
-    `<!DOCTYPE html>`
+```html
+<!DOCTYPE html>
+```
 
-Die `<!DOCTYPE html>`- Keine Tag im eigentlichen Sinne, sondern die Deklaration für HTML5. Deklaration teilt dem Browser mit, dass es sich um ein **HTML5-Dokument** handelt.  
-Sie ist **kein HTML-Tag**, sondern eine notwendige Anweisung für den korrekten Darstellungsmodus.
+Die `<!DOCTYPE html>`-Deklaration ist **kein Tag** im eigentlichen Sinne, sondern eine notwendige Anweisung für den Browser. Sie teilt dem Browser mit, dass es sich um ein **HTML5-Dokument** handelt und stellt den korrekten Darstellungsmodus sicher.
 
-## **`<html>`** Tag
+### `<html>`-Tag
 
-Das Wurzelelement, umschließt das gesamte Dokument. Es signalisiert dem Browser, dass der gesamte darin enthaltene Code als HTML interpretiert werden soll. Es hat einen offenen und geschlossenen Tag.
-Es umschließt alle anderen Elemente einer Webseite (außer der `<!DOCTYPE html>`-Deklaration).  
+Das Wurzelelement umschließt das gesamte Dokument. Es signalisiert dem Browser, dass der gesamte darin enthaltene Code als HTML interpretiert werden soll. Es hat einen öffnenden und schließenden Tag und umschließt alle anderen Elemente einer Webseite (außer der `<!DOCTYPE html>`-Deklaration).
 
-    <html> </html>
+```html
+<html> </html>
+```
 
-- **`<head>`**: Enthält Metainformationen (Titel, Scripte, CSS-Links), die nicht direkt auf der Seite erscheinen.
+### `<head>`-Tag
 
-    ``` <html>
-        <head>
-            <meta charset="UTF-8">
-            <title>Seitentitel</title>
-        </head>
-    </html>
-    ```
+Enthält Metainformationen (Titel, Scripte, CSS-Links), die nicht direkt auf der Seite erscheinen.
 
-- **`<body>`**: Umschließt den gesamten sichtbaren Inhalt der Webseite, wie Texte, Überschriften, Bilder, Links, Videos, Tabellen, Listen usw. Er fungiert als Container für alles, was der Besucher der Website sieht.
+```html
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Seitentitel</title>
+    </head>
+</html>
+```
 
-        ```<html>
-        <head></head>
-        <body>
-            <h1>Willkommen</h1>
-            <p>Dies ist der sichtbare Inhalt.</p>
-        </body>
-    </html>```
+### `<body>`-Tag
+
+Umschließt den gesamten sichtbaren Inhalt der Webseite, wie Texte, Überschriften, Bilder, Links, Videos, Tabellen, Listen usw. Er fungiert als Container für alles, was der Besucher der Website sieht.
+
+```html
+<html>
+    <head></head>
+    <body>
+        <h1>Willkommen</h1>
+        <p>Dies ist der sichtbare Inhalt.</p>
+    </body>
+</html>
+```
+
+---
 
 ## 2. Text-Strukturierung & Semantik
 
-Diese Tags geben dem Inhalt Bedeutung und helfen Suchmaschinen (SEO):
+Diese Tags geben dem Inhalt Bedeutung und helfen Suchmaschinen (SEO).
 
-- **`<h1>` bis `<h6>`**: Für Überschriften. h1 ist die wichtigste und sollte nur einmal pro Seite verwendet werden, da sie das Hauptthema darstellt. Die Reihenfolge h1-h6 muss logisch eingehalten werden, um die Struktur für Nutzer und Suchmaschinen zu wahren (z. B. H2 als Unterpunkt von H1, H3 als Unterpunkt von H2) – man darf nicht überspringen oder rückwärts springen (h2 und danach h4 geht nicht). Bei neuen Sektionen beginnt man einfach mit der nächsten logischen Ebene (wieder mit h2 und danach mit h3) und folgt dann wieder der Reihenfolge.
-Regeln für Überschriften h1-h6:
-**h1 Einmal pro Seite**: Die wichtigste Überschrift, der Titel der Seite, sollte nur einmal vorkommen, um das Hauptthema klar zu definieren.
-**Logische Hierarchie (h2-h6)**: Muss man der Reihenfolge folgen. Ein h2 ist unter h2, danach kommt h3 und so weiter. Vermeide Sprünge wie h2 -> h4.
-**Häufigkeit**: h2, h3, h4 usw. können mehrmals verwendet werden, solange es der Struktur dient. Oft reichen h1-h3 für die meisten Seiten aus. Ein h2 nach einem zB. h4 nur benutzen, wenn es neue Section anfängt.
+### Überschriften: `<h1>` bis `<h6>`
+
+Für Überschriften. `<h1>` ist die wichtigste und sollte nur einmal pro Seite verwendet werden, da sie das Hauptthema darstellt.
+
+#### Regeln für Überschriften h1-h6:
+
+- **h1 einmal pro Seite**: Die wichtigste Überschrift, der Titel der Seite, sollte nur einmal vorkommen, um das Hauptthema klar zu definieren.
+- **Logische Hierarchie (h2-h6)**: Man muss der Reihenfolge folgen. Ein h2 ist unter h1, danach kommt h3 und so weiter. Vermeide Sprünge wie h2 → h4.
+- **Häufigkeit**: h2, h3, h4 usw. können mehrmals verwendet werden, solange es der Struktur dient. Oft reichen h1-h3 für die meisten Seiten aus.
+- Ein h2 nach einem z.B. h4 nur benutzen, wenn eine neue Section anfängt.
+
+Die Reihenfolge h1-h6 muss logisch eingehalten werden, um die Struktur für Nutzer und Suchmaschinen zu wahren (z.B. h2 als Unterpunkt von h1, h3 als Unterpunkt von h2). Bei neuen Sektionen beginnt man einfach mit der nächsten logischen Ebene (wieder mit h2 und danach mit h3) und folgt dann wieder der Reihenfolge.
 
 ```html
 <html>
@@ -147,11 +179,19 @@ Einzelnes Listenelement. `<li>`-Elemente werden innerhalb von `<ul>` oder `<ol>`
 
 ## 4. Medien & Container
 
-- `<img>`: Bindet ein Bild ein (`src` und `alt` sind Pflicht).
+### Bilder: `<img>`
 
-    `<img src="pfad/zum/bild.jpg" alt="Beschreibung des Bildes">`
+Bindet ein Bild ein (`src` und `alt` sind Pflicht).
 
-- `<div>`:  Der `<div>` Tag ist ein universeller Container, um andere HTML-Elemente zu gruppieren und logische Abschnitte auf einer Webseite zu erstellen, die dann mittels CSS gestylt oder mit JavaScript manipuliert werden können. Er hat keine eigene semantische Bedeutung, dient rein der Strukturierung und ist besonders nützlich für Layouts (z. B. mit Flexbox/Grid). Ohne Styling ist ein `<div>` unsichtbar (der `<div>`, nicht sein Inhalt!), wird aber als Block-Element behandelt, was einen Zeilenumbruch erzeugt und die volle Breite einnimmt
+```html
+<img src="pfad/zum/bild.jpg" alt="Beschreibung des Bildes">
+```
+
+### Container: `<div>`
+
+Der `<div>`-Tag ist ein universeller Container, um andere HTML-Elemente zu gruppieren und logische Abschnitte auf einer Webseite zu erstellen, die dann mittels CSS gestylt oder mit JavaScript manipuliert werden können.
+
+Er hat keine eigene semantische Bedeutung, dient rein der Strukturierung und ist besonders nützlich für Layouts (z.B. mit Flexbox/Grid). Ohne Styling ist ein `<div>` unsichtbar (der `<div>`, nicht sein Inhalt!), wird aber als Block-Element behandelt, was einen Zeilenumbruch erzeugt und die volle Breite einnimmt.
 
 ```html
 <div class="produkt-box">
@@ -160,7 +200,11 @@ Einzelnes Listenelement. `<li>`-Elemente werden innerhalb von `<ul>` oder `<ol>`
 </div>
 ```
 
-- `<span>`: Ist dafür da um generischer (= es hat keine vordefinierte Bedeutung oder Darstellung. Es ist nur ein Werkzeug) Inline-Container für Textabschnitte ohne visuelle Veränderung zu markieren, damit sie mit CSS gestylt (Farbe, Schriftgröße) oder mit JavaScript manipuliert werden können, ohne den Textfluss zu unterbrechen. Das heißt: Im Gegensatz zu Block-Elementen wie `<div>`, bleibt der `<span>` in derselben Zeile, wo es platziert wird, und erzeugt keinen Zeilenumbruch. Sie funktionieren wie ein "Haken" (Hook) für gezielte Formatierungen innerhalb einer Zeile oder eines Absatzes. Wie dem `<div>` weist man dem `<span>` eine Klasse oder ID zu, um es mit CSS zu gestalten.
+### Inline-Container: `<span>`
+
+Ist ein generischer (= es hat keine vordefinierte Bedeutung oder Darstellung) Inline-Container für Textabschnitte ohne visuelle Veränderung, um sie mit CSS zu stylen (Farbe, Schriftgröße) oder mit JavaScript zu manipulieren, ohne den Textfluss zu unterbrechen.
+
+Im Gegensatz zu Block-Elementen wie `<div>`, bleibt der `<span>` in derselben Zeile, wo es platziert wird, und erzeugt keinen Zeilenumbruch. Sie funktionieren wie ein "Haken" (Hook) für gezielte Formatierungen innerhalb einer Zeile oder eines Absatzes. Wie dem `<div>` weist man dem `<span>` eine Klasse oder ID zu, um es mit CSS zu gestalten.
 
 ```html
 <p>Dies ist ein normaler Satz. <span class="hervorhebung">Dieser Teil wird gelb hinterlegt</span> und hier geht der Satz normal weiter.</p>
@@ -170,52 +214,72 @@ Einzelnes Listenelement. `<li>`-Elemente werden innerhalb von `<ul>` oder `<ol>`
 
 ## 5. Semantische HTML-Tags (Layout)
 
-Diese Tags verbessern Struktur, Barrierefreiheit und SEO (=Suchmaschinenoptimierung):
+Diese Tags verbessern Struktur, Barrierefreiheit und SEO (Suchmaschinenoptimierung):
 
-- `<header>`: Kopfbereich einer Seite oder eines Abschnitts.
+- **`<header>`**: Kopfbereich einer Seite oder eines Abschnitts.
+- **`<nav>`**: Navigationsbereich.
+- **`<main>`**: Hauptinhalt der Seite.
+- **`<section>`**: Thematischer Abschnitt.
+- **`<article>`**: Eigenständiger Inhalt (z.B. Blogpost).
+- **`<footer>`**: Fußbereich der Seite.
 
-Diese Tags befinden sich im <head>-Bereich des HTML-Dokuments. Sie sind für den Besucher unsichtbar, aber essenziell für die Kommunikation mit Suchmaschinen und dem Browser:
-<title>: Dies ist das wichtigste On-Page-SEO-Element. Er legt den Titel der Seite fest, der oben im Browser-Tab und als klickbare Überschrift in den Suchergebnissen (SERPs) angezeigt wird. Ein prägnanter Titel verbessert das Ranking und die Klickrate.
+---
 
-- `<meta>`: Zusammenfassung, beeinflusst Klicks, obwohl Google oft eigene Beschreibungen generiert.
+## 6. Meta-Informationen & SEO
 
-    `<meta name=”name” content=”content”>`
+Diese Tags befinden sich im `<head>`-Bereich des HTML-Dokuments. Sie sind für den Besucher unsichtbar, aber essenziell für die Kommunikation mit Suchmaschinen und dem Browser.
 
-## Meta-Informationen & SEO
+### `<title>`
 
-- `<title>`: Legt den Titel der Webseite fest, der im Browser-Tab und als Hauptüberschrift in den Suchergebnissen erscheint. Er ist das wichtigste HTML-Element, um Suchmaschinen das Thema der Seite zu signalisieren.
+Legt den Titel der Webseite fest, der im Browser-Tab und als Hauptüberschrift in den Suchergebnissen erscheint. Er ist das wichtigste HTML-Element, um Suchmaschinen das Thema der Seite zu signalisieren.
 
 ```html
 <title>HTML Glossar: SEO-Tags richtig nutzen</title>
 ```
 
-- `<meta name="description">`: Enthält eine kurze Zusammenfassung des Inhalts. Suchmaschinen nutzen diesen Text für das Snippet in den Suchergebnissen. Er dient als Werbetext, um die Klickrate (CTR) der Nutzer zu erhöhen.
+### `<meta name="description">`
 
-    `<meta name="description" content="Ein umfassendes Glossar über HTML-Tags, die Ihre Suchmaschinenoptimierung verbessern.">`
+Enthält eine kurze Zusammenfassung des Inhalts. Suchmaschinen nutzen diesen Text für das Snippet in den Suchergebnissen. Er dient als Werbetext, um die Klickrate (CTR) der Nutzer zu erhöhen.
 
-- `<meta name="viewport">`: Dieser Tag ist zwingend erforderlich für das responsive Design. Er sorgt dafür, dass die Webseite auf Mobilgeräten korrekt skaliert wird, was ein kritischer Rankingfaktor für Google ist.
+```html
+<meta name="description" content="Ein umfassendes Glossar über HTML-Tags, die Ihre Suchmaschinenoptimierung verbessern.">
+```
 
-    `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+### `<meta name="viewport">`
 
-- `<meta name="robots">`: Gibt Anweisungen an Suchmaschinen-Crawler, ob eine Seite indexiert werden soll oder ob Links auf der Seite verfolgt werden dürfen.
+Dieser Tag ist zwingend erforderlich für das responsive Design. Er sorgt dafür, dass die Webseite auf Mobilgeräten korrekt skaliert wird, was ein kritischer Rankingfaktor für Google ist.
 
-    `<meta name="robots" content="index, follow">`
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
 
-- `<link rel="canonical">`: Verweist auf die Original-URL einer Webseite. Dies verhindert Probleme mit doppeltem Inhalt (Duplicate Content), indem es Google mitteilt, welche Version der Seite in den Suchindex gehört.
+### `<meta name="robots">`
 
-    `<link rel="canonical" href="www.deineseite.de">`
+Gibt Anweisungen an Suchmaschinen-Crawler, ob eine Seite indexiert werden soll oder ob Links auf der Seite verfolgt werden dürfen.
 
-- `<meta charset="UTF-8">`: Legt die Zeichenkodierung fest. Dies stellt sicher, dass Umlaute und Sonderzeichen weltweit in jedem Browser korrekt dargestellt werden und verhindert Darstellungsfehler.
+```html
+<meta name="robots" content="index, follow">
+```
 
-    `<meta charset="UTF-8">`
+### `<link rel="canonical">`
 
-- `<nav>`: Navigationsbereich.
-- `<main>`: Hauptinhalt der Seite.
-- `<section>`: Thematischer Abschnitt.
-- `<article>`: Eigenständiger Inhalt (z. B. Blogpost).
-- `<footer>`: Fußbereich der Seite.
+Verweist auf die Original-URL einer Webseite. Dies verhindert Probleme mit doppeltem Inhalt (Duplicate Content), indem es Google mitteilt, welche Version der Seite in den Suchindex gehört.
 
-## Vollständiges html
+```html
+<link rel="canonical" href="https://www.deineseite.de">
+```
+
+### `<meta charset="UTF-8">`
+
+Legt die Zeichenkodierung fest. Dies stellt sicher, dass Umlaute und Sonderzeichen weltweit in jedem Browser korrekt dargestellt werden und verhindert Darstellungsfehler.
+
+```html
+<meta charset="UTF-8">
+```
+
+---
+
+## Vollständiges HTML-Beispiel
 
 ```html
 <!DOCTYPE html>
