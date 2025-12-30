@@ -86,11 +86,11 @@ Enthält Metainformationen (Titel, Scripte, CSS-Links), die nicht direkt auf der
 </html>
 ```
 
-## Meta-Informationen & SEO
+### Meta-Informationen & SEO
 
 Diese Tags befinden sich im `<head>`-Bereich des HTML-Dokuments. Sie sind für den Besucher unsichtbar, aber essenziell für die Kommunikation mit Suchmaschinen und dem Browser.
 
-### `<title>`
+#### `<title>`
 
 Legt den Titel der Webseite fest, der im Browser-Tab und als Hauptüberschrift in den Suchergebnissen erscheint. Er ist das wichtigste HTML-Element, um Suchmaschinen das Thema der Seite zu signalisieren.
 
@@ -98,7 +98,7 @@ Legt den Titel der Webseite fest, der im Browser-Tab und als Hauptüberschrift i
 <title>HTML Glossar: SEO-Tags richtig nutzen</title>
 ```
 
-### `<meta name="description">`
+#### `<meta name="description">`
 
 Enthält eine kurze Zusammenfassung des Inhalts. Suchmaschinen nutzen diesen Text für das Snippet in den Suchergebnissen. Er dient als Werbetext, um die Klickrate (CTR) der Nutzer zu erhöhen.
 
@@ -106,7 +106,7 @@ Enthält eine kurze Zusammenfassung des Inhalts. Suchmaschinen nutzen diesen Tex
 <meta name="description" content="Ein umfassendes Glossar über HTML-Tags, die Ihre Suchmaschinenoptimierung verbessern.">
 ```
 
-### `<meta name="viewport">`
+#### `<meta name="viewport">`
 
 Dieser Tag ist zwingend erforderlich für das responsive Design. Er sorgt dafür, dass die Webseite auf Mobilgeräten korrekt skaliert wird, was ein kritischer Rankingfaktor für Google ist.
 
@@ -114,7 +114,7 @@ Dieser Tag ist zwingend erforderlich für das responsive Design. Er sorgt dafür
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
-### `<meta name="robots">`
+#### `<meta name="robots">`
 
 Gibt Anweisungen an Suchmaschinen-Crawler, ob eine Seite indexiert werden soll oder ob Links auf der Seite verfolgt werden dürfen.
 
@@ -122,7 +122,7 @@ Gibt Anweisungen an Suchmaschinen-Crawler, ob eine Seite indexiert werden soll o
 <meta name="robots" content="index, follow">
 ```
 
-### `<link rel="canonical">`
+#### `<link rel="canonical">`
 
 Verweist auf die Original-URL einer Webseite. Dies verhindert Probleme mit doppeltem Inhalt (Duplicate Content), indem es Google mitteilt, welche Version der Seite in den Suchindex gehört.
 
@@ -130,7 +130,7 @@ Verweist auf die Original-URL einer Webseite. Dies verhindert Probleme mit doppe
 <link rel="canonical" href="https://www.deineseite.de">
 ```
 
-### `<meta charset="UTF-8">`
+#### `<meta charset="UTF-8">`
 
 Legt die Zeichenkodierung fest. Dies stellt sicher, dass Umlaute und Sonderzeichen weltweit in jedem Browser korrekt dargestellt werden und verhindert Darstellungsfehler.
 
@@ -231,7 +231,7 @@ Einzelnes Listenelement. `<li>`-Elemente werden innerhalb von `<ul>` oder `<ol>`
 
 ---
 
-## 5. Medien & Container
+## 4. Medien & Container
 
 ### Bilder: `<img>`
 
@@ -239,6 +239,36 @@ Bindet ein Bild ein (`src` und `alt` sind Pflicht).
 
 ```html
 <img src="pfad/zum/bild.jpg" alt="Beschreibung des Bildes">
+```
+
+### Video: `<video>`
+
+Dient zum Einbetten von Videodateien ohne externe Player.
+
+**Wichtige Merkmale**: Unterstützt Attribute wie `controls` (Play/Pause-Button), `autoplay` oder `loop`.
+
+```html
+<video src="film.mp4" controls width="400"></video>
+```
+
+### Audio: `<audio>`
+
+Dient zum Einbetten von Tondateien oder Musik.
+
+**Wichtige Merkmale**: Ähnlich wie `<video>`, benötigt meist das `controls`-Attribut, damit der Nutzer die Wiedergabe starten kann.
+
+```html
+<audio src="musik.mp3" controls></audio>
+```
+
+### iFrame: `<iframe>`
+
+Bettet eine andere Webseite oder ein externes Medium (z.B. Google Maps) ein.
+
+**Wichtige Merkmale**: Benötigt das `src`-Attribut. Sicherheitsmerkmale wie `sandbox` sind oft wichtig.
+
+```html
+<iframe src="https://www.wikipedia.org" width="500" height="300"></iframe>
 ```
 
 ### Container: `<div>`
@@ -266,255 +296,217 @@ Im Gegensatz zu Block-Elementen wie `<div>`, bleibt der `<span>` in derselben Ze
 
 ---
 
+## 5. Semantische HTML-Tags (Layout)
 
+Diese Tags verbessern Struktur, Barrierefreiheit und SEO (Suchmaschinenoptimierung).
 
-## 6. Semantische HTML-Tags (Layout)
+### `<header>`
 
-Diese Tags verbessern Struktur, Barrierefreiheit und SEO (Suchmaschinenoptimierung):
+Definiert den Kopfbereich einer Seite oder eines Abschnitts.
 
-- **`<header>`**: Kopfbereich einer Seite oder eines Abschnitts.
-
-Definiert den Kopfbereich einer Seite oder eines Abschnitts. 
-- Wichtige Merkmale: Enthält meist das Logo, den Seitentitel oder die Hauptnavigation. Er hilft Screenreadern, den Einstiegspunkt der Seite zu finden.
+**Wichtige Merkmale**: Enthält meist das Logo, den Seitentitel oder die Hauptnavigation. Er hilft Screenreadern, den Einstiegspunkt der Seite zu finden.
 
 ```html
 <header>
-  <h1>Unternehmensname</h1>
+    <h1>Unternehmensname</h1>
 </header>
 ```
 
-- **`<nav>`**: Navigationsbereich.
-<nav>
+### `<nav>`
+
 Markiert einen Bereich, der Navigationslinks enthält.
 
-    Wichtige Merkmale: Wird für Hauptmenüs, Inhaltsverzeichnisse oder Breadcrumbs verwendet. Nicht jeder Link muss in ein <nav>, nur größere Blöcke.
-    Beispiel:
+**Wichtige Merkmale**: Wird für Hauptmenüs, Inhaltsverzeichnisse oder Breadcrumbs verwendet. Nicht jeder Link muss in ein `<nav>`, nur größere Blöcke.
 
-html
-
+```html
 <nav>
-  <a href="/home">Home</a>
-  <a href="/shop">Shop</a>
+    <a href="/home">Home</a>
+    <a href="/shop">Shop</a>
 </nav>
+```
 
+### `<main>`
 
-- **`<main>`**: Hauptinhalt der Seite.
-
-<main>
 Kennzeichnet den einzigartigen Hauptinhalt des Dokuments.
 
-    Wichtige Merkmale: Darf nur einmal pro Seite vorkommen. Er schließt Header, Footer und Sidebar aus.
-    Beispiel:
+**Wichtige Merkmale**: Darf nur einmal pro Seite vorkommen. Er schließt Header, Footer und Sidebar aus.
 
-html
-
+```html
 <main>
-  <h2>Aktuelle Nachrichten</h2>
-  <p>Hier steht der wichtigste Text der Seite.</p>
+    <h2>Aktuelle Nachrichten</h2>
+    <p>Hier steht der wichtigste Text der Seite.</p>
 </main>
+```
 
-- **`<section>`**: Thematischer Abschnitt.
+### `<section>`
 
-<section>
 Definiert einen thematisch zusammengehörigen Abschnitt innerhalb eines Dokuments.
 
-    Wichtige Merkmale: Sollte in der Regel eine eigene Überschrift (<h2>-<h6>) haben.
-    Beispiel:
+**Wichtige Merkmale**: Sollte in der Regel eine eigene Überschrift (`<h2>`-`<h6>`) haben.
 
-html
-
+```html
 <section>
-  <h2>Über uns</h2>
-  <p>Wir sind ein Team aus Entwicklern.</p>
+    <h2>Über uns</h2>
+    <p>Wir sind ein Team aus Entwicklern.</p>
 </section>
+```
 
-- **`<article>`**: Eigenständiger Inhalt (z.B. Blogpost).
+### `<article>`
 
-<article>
 Stellt einen eigenständigen, in sich geschlossenen Inhalt dar.
 
-    Wichtige Merkmale: Ideal für Blogbeiträge, Zeitungsartikel oder Forenposts, die theoretisch auch alleine auf einer Seite stehen könnten.
-    Beispiel:
+**Wichtige Merkmale**: Ideal für Blogbeiträge, Zeitungsartikel oder Forenposts, die theoretisch auch alleine auf einer Seite stehen könnten.
 
-html
-
+```html
 <article>
-  <h2>Rezept: Apfelkuchen</h2>
-  <p>Zuerst die Äpfel schneiden...</p>
+    <h2>Rezept: Apfelkuchen</h2>
+    <p>Zuerst die Äpfel schneiden...</p>
 </article>
+```
 
+### `<aside>`
 
-- **`<aside>`**: ???
-
-<aside>
 Markiert Inhalte, die nur indirekt mit dem Hauptinhalt zu tun haben.
 
-    Wichtige Merkmale: Wird oft für Seitenleisten (Sidebars), Werbebanner oder Glossar-Boxen verwendet.
-    Beispiel:
+**Wichtige Merkmale**: Wird oft für Seitenleisten (Sidebars), Werbebanner oder Glossar-Boxen verwendet.
 
-html
-
+```html
 <aside>
-  <h4>Wussten Sie schon?</h4>
-  <p>HTML wurde 1989 erfunden.</p>
+    <h4>Wussten Sie schon?</h4>
+    <p>HTML wurde 1989 erfunden.</p>
 </aside>
+```
 
-- **`<footer>`**: Fußbereich der Seite.
+### `<footer>`
 
-<footer>
 Definiert den Fußbereich einer Seite oder eines Abschnitts.
 
-    Wichtige Merkmale: Enthält oft Copyright-Infos, Kontaktlinks oder rechtliche Hinweise (Impressum).
-    Beispiel:
+**Wichtige Merkmale**: Enthält oft Copyright-Infos, Kontaktlinks oder rechtliche Hinweise (Impressum).
 
-html
-
+```html
 <footer>
-  <p>&copy; 2025 Mein Blog</p>
+    <p>&copy; 2025 Mein Blog</p>
 </footer>
+```
 
-<form>
+---
+
+## 6. Formulare & Benutzereingaben
+
+### `<form>`
+
 Erstellt einen Bereich für Benutzereingaben (Formulare).
 
-    Wichtige Merkmale: Nutzt Attribute wie action (Ziel des Formulars) und method (get/post), um Daten zu senden.
-    Beispiel:
+**Wichtige Merkmale**: Nutzt Attribute wie `action` (Ziel des Formulars) und `method` (get/post), um Daten zu senden.
 
-html
-
+```html
 <form action="/login" method="POST">
-  <!-- Eingabefelder hier -->
+    <!-- Eingabefelder hier -->
 </form>
+```
 
-<input>
+### `<input>`
+
 Das wichtigste Element für Dateneingaben innerhalb von Formularen.
 
-    Wichtige Merkmale: Ein leeres Tag. Der Typ (type) bestimmt die Funktion (z.B. text, password, checkbox, email).
-    Beispiel:
+**Wichtige Merkmale**: Ein leeres Tag. Der Typ (`type`) bestimmt die Funktion (z.B. text, password, checkbox, email).
 
-html
-
+```html
 <input type="text" placeholder="Benutzername">
+```
 
-<label>
-Definiert eine Beschriftung für ein <input>-Element.
+### `<label>`
 
-    Wichtige Merkmale: Erhöht die Barrierefreiheit. Wenn man auf das Label klickt, wird das zugehörige Eingabefeld aktiviert.
-    Beispiel:
+Definiert eine Beschriftung für ein `<input>`-Element.
 
-html
+**Wichtige Merkmale**: Erhöht die Barrierefreiheit. Wenn man auf das Label klickt, wird das zugehörige Eingabefeld aktiviert.
 
+```html
 <label for="mail">E-Mail:</label>
 <input type="email" id="mail">
+```
 
+### `<button>`
 
-<button>
 Erstellt eine anklickbare Schaltfläche.
 
-    Wichtige Merkmale: Kann Text oder Bilder enthalten. Innerhalb von Formularen sendet er diese standardmäßig ab.
-    Beispiel:
+**Wichtige Merkmale**: Kann Text oder Bilder enthalten. Innerhalb von Formularen sendet er diese standardmäßig ab.
 
-html
-
+```html
 <button type="submit">Jetzt absenden</button>
+```
 
+### `<textarea>`
 
-<textarea>
 Ein mehrzeiliges Eingabefeld für längere Texte.
 
-    Wichtige Merkmale: Die Größe kann über die Attribute rows und cols oder per CSS gesteuert werden.
-    Beispiel:
+**Wichtige Merkmale**: Die Größe kann über die Attribute `rows` und `cols` oder per CSS gesteuert werden.
 
-html
-
+```html
 <textarea rows="4">Geben Sie hier Ihre Nachricht ein.</textarea>
+```
 
-<select> und <option>
+### `<select>` und `<option>`
+
 Erstellt eine Dropdown-Auswahlliste.
 
-    Wichtige Merkmale: <select> ist der Container, <option> sind die einzelnen auswäbaren Punkte.
-    Beispiel:
+**Wichtige Merkmale**: `<select>` ist der Container, `<option>` sind die einzelnen auswählbaren Punkte.
 
-html
-
+```html
 <select name="autos">
-  <option value="volvo">Volvo</option>
-  <option value="bmw">BMW</option>
+    <option value="volvo">Volvo</option>
+    <option value="bmw">BMW</option>
 </select>
+```
 
-<table>
+---
+
+## 7. Tabellen
+
+### `<table>`
+
 Das Hauptelement zur Erstellung einer Datentabelle.
 
-    Wichtige Merkmale: Sollte nur für tabellarische Daten genutzt werden, nicht für das Layout der Webseite.
-    Beispiel:
+**Wichtige Merkmale**: Sollte nur für tabellarische Daten genutzt werden, nicht für das Layout der Webseite.
 
-html
-
+```html
 <table>
-  <!-- Zeilen und Zellen -->
+    <!-- Zeilen und Zellen -->
 </table>
+```
 
-<tr> (Table Row)
+### `<tr>` (Table Row)
+
 Definiert eine Tabellenzeile.
 
-    Wichtige Merkmale: Enthält entweder Kopfzellen (<th>) oder Datenzellen (<td>).
-    Beispiel:
+**Wichtige Merkmale**: Enthält entweder Kopfzellen (`<th>`) oder Datenzellen (`<td>`).
 
-html
-
+```html
 <tr>
-  <td>Max</td>
-  <td>Mustermann</td>
+    <td>Max</td>
+    <td>Mustermann</td>
 </tr>
+```
 
-<th> (Table Header)
+### `<th>` (Table Header)
+
 Definiert eine Kopfzelle in einer Tabelle.
 
-    Wichtige Merkmale: Der Text wird standardmäßig fett und zentriert dargestellt.
-    Beispiel:
+**Wichtige Merkmale**: Der Text wird standardmäßig fett und zentriert dargestellt.
 
-html
-
+```html
 <th>Vorname</th>
+```
 
-<td> (Table Data)
+### `<td>` (Table Data)
+
 Definiert eine Standard-Datenzelle in einer Tabelle.
 
-    Wichtige Merkmale: Enthält den eigentlichen Inhalt der Tabellenzelle.
-    Beispiel:
+**Wichtige Merkmale**: Enthält den eigentlichen Inhalt der Tabellenzelle.
 
-html
-
+```html
 <td>Max</td>
-
-<iframe>
-Bettet eine andere Webseite oder ein externes Medium (z. B. Google Maps) ein.
-
-    Wichtige Merkmale: Benötigt das src-Attribut. Sicherheitsmerkmale wie sandbox sind oft wichtig.
-    Beispiel:
-
-html
-
-<iframe src="https://www.wikipedia.org" width="500" height="300"></iframe>
-
-<video>
-Dient zum Einbetten von Videodateien ohne externe Player.
-
-    Wichtige Merkmale: Unterstützt Attribute wie controls (Play/Pause-Button), autoplay oder loop.
-    Beispiel:
-
-html
-
-<video src="film.mp4" controls width="400"></video>
-
-<audio>
-Dient zum Einbetten von Tondateien oder Musik.
-
-    Wichtige Merkmale: Ähnlich wie <video>, benötigt meist das controls-Attribut, damit der Nutzer die Wiedergabe starten kann.
-    Beispiel:
-
-html
-
-<audio src="musik.mp3" controls></audio>
+```
 
 ---
 
@@ -525,6 +517,8 @@ html
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eine Beispielseite für HTML-Strukturen">
     <title>Meine Beispielseite 2025</title>
 </head>
 <body>
@@ -558,13 +552,18 @@ html
         </section>
 
         <section>
-            <div>
+            <article>
                 <h2>H2 Überschrift: Ein Bild sagt mehr als Worte</h2>
                 <h3>H3 Überschrift</h3>
                 <p>Hier drunter ist ein Bild mit img-Tag</p>
                 <img src="beispiel.jpg" alt="Ein schönes Beispielbild" width="300">
-            </div>
+            </article>
         </section>
+
+        <aside>
+            <h4>Wussten Sie schon?</h4>
+            <p>HTML5 bietet viele neue semantische Elemente für bessere Strukturierung.</p>
+        </aside>
     </main>
 
     <footer>
@@ -573,5 +572,3 @@ html
 </body>
 </html>
 ```
-
----
