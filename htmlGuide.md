@@ -668,3 +668,53 @@ Speicherauslastung: <meter value="0.6">60%</meter>
 ```
 
 ---
+
+## 10. Erweiterte Medien & Inhalte
+
+### `<figure>`
+
+Umschließt eigenständige Inhalte wie Bilder, Grafiken oder Code-Beispiele, oft zusammen mit einer Bildunterschrift.
+
+**Wichtige Merkmale**: Gruppiert den Inhalt semantisch als eine Einheit.
+
+```html
+<figure>
+    <img src="diagramm.png" alt="Statistik">
+    <figcaption>Abb 1: Nutzerwachstum 2025</figcaption>
+</figure>
+```
+
+### `<figcaption>`
+
+Definiert die Bildunterschrift oder Legende für ein `<figure>`-Element.
+
+**Wichtige Merkmale**: Steht innerhalb von `<figure>`, entweder ganz oben oder ganz unten.
+
+```html
+<figcaption>Dies ist die Beschreibung der Grafik.</figcaption>
+```
+
+### `<canvas>`
+
+Erstellt einen Bereich, in dem mithilfe von JavaScript Grafiken, Animationen oder Spiele gezeichnet werden können.
+
+**Wichtige Merkmale**: Es ist nur ein Container; die eigentliche Grafikarbeit erfolgt per Skript.
+
+```html
+<canvas id="meinSpiel" width="200" height="200"></canvas>
+```
+
+### `<svg>`
+
+Wird verwendet, um skalierbare Vektorgrafiken direkt in das HTML-Dokument einzubetten.
+
+**Wichtige Merkmale**: SVG-Grafiken bleiben beim Zoomen scharf und können per CSS gestylt werden.
+
+```html
+<svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="black" fill="red" />
+</svg>
+```
+
+---
+
