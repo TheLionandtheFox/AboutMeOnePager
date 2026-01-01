@@ -718,3 +718,104 @@ Wird verwendet, um skalierbare Vektorgrafiken direkt in das HTML-Dokument einzub
 
 ---
 
+## 11. Semantische Text-Auszeichnung
+
+### `<time>`
+
+Markiert ein Datum oder eine Uhrzeit in einem maschinenlesbaren Format.
+
+**Wichtige Merkmale**: Hilft Suchmaschinen, Termine oder Veröffentlichungsdaten korrekt zu erfassen (Attribut `datetime`).
+
+```html
+<time datetime="2025-12-24">Heiligabend 2025</time>
+```
+
+### `<mark>`
+
+Hebt Textstellen gelb (standardmäßig) hervor, um eine Relevanz zu markieren.
+
+**Wichtige Merkmale**: Verhält sich wie ein Textmarker.
+
+```html
+<p>Das ist ein <mark>wichtiger</mark> Hinweis.</p>
+```
+
+### `<code>`
+
+Markiert Text als Computer-Code.
+
+**Wichtige Merkmale**: Wird standardmäßig in einer Monospace-Schriftart (Dicktengleich) dargestellt.
+
+```html
+<p>Nutzen Sie den Befehl <code>git push</code>.</p>
+```
+
+### `<pre>`
+
+Stellt vorformatierten Text exakt so dar, wie er im Quellcode geschrieben wurde (inklusive Leerzeichen und Umbrüchen).
+
+**Wichtige Merkmale**: Häufig in Kombination mit `<code>` für mehrzeilige Code-Blöcke verwendet.
+
+```html
+<pre>
+    Zeile 1
+    Zeile 2 (eingerückt)
+</pre>
+```
+
+### `<blockquote>`
+
+Kennzeichnet einen längeren zitierten Abschnitt aus einer anderen Quelle.
+
+**Wichtige Merkmale**: Browser rücken diesen Block meist standardmäßig ein.
+
+```html
+<blockquote cite="https://zitate.de">
+    „Der Hunger kommt beim Essen."
+</blockquote>
+```
+
+### `<cite>`
+
+Gibt den Titel eines Werks an (z.B. Buch, Film, Lied), auf das verwiesen wird.
+
+**Wichtige Merkmale**: Wird vom Browser meist kursiv dargestellt.
+
+```html
+<p>Ich lese gerade <cite>HTML für Profis</cite>.</p>
+```
+
+### `<abbr>`
+
+Definiert eine Abkürzung oder ein Akronym.
+
+**Wichtige Merkmale**: Mit dem `title`-Attribut wird die volle Bedeutung beim Drüberfahren mit der Maus (Hover) angezeigt.
+
+```html
+<p>Die <abbr title="World Wide Web">WWW</abbr>-Konferenz.</p>
+```
+
+### `<address>`
+
+Enthält Kontaktinformationen für den Autor oder Besitzer eines Dokuments oder Artikels.
+
+**Wichtige Merkmale**: Wird oft im `<footer>` verwendet.
+
+```html
+<address>
+    Max Mustermann<br>
+    Musterstraße 1, Berlin
+</address>
+```
+
+### `<dfn>`
+
+Markiert die definierende Instanz eines Begriffs.
+
+**Wichtige Merkmale**: Zeigt an, dass der umschlossene Text hier im Kontext erklärt wird.
+
+```html
+<p><dfn>HTML</dfn> ist die Sprache des Webs.</p>
+```
+
+---
