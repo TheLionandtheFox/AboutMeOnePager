@@ -819,3 +819,58 @@ Markiert die definierende Instanz eines Begriffs.
 ```
 
 ---
+
+## 12. Technische Text-Auszeichnung
+
+### `<kbd>`
+
+Markiert Text als Tastatureingabe des Benutzers.
+
+**Wichtige Merkmale**: Wird meist in einer Monospace-Schrift dargestellt.
+
+```html
+<p>Drücken Sie <kbd>F5</kbd> zum Aktualisieren.</p>
+```
+
+### `<samp>`
+
+Markiert Text als Beispielausgabe eines Computerprogramms.
+
+**Wichtige Merkmale**: Ähnlich wie `<code>` und `<kbd>`, dient der semantischen Unterscheidung.
+
+```html
+<p>Der Computer meldet: <samp>Datei nicht gefunden.</samp></p>
+```
+
+### `<var>`
+
+Markiert eine Variable in einem mathematischen Ausdruck oder im Programmcode.
+
+**Wichtige Merkmale**: Wird vom Browser meist kursiv dargestellt.
+
+```html
+<p><var>x</var> = <var>y</var> + 2</p>
+```
+
+### `<sub>`
+
+Definiert tiefgestellten Text (Subscript).
+
+**Wichtige Merkmale**: Wird oft für chemische Formeln verwendet.
+
+```html
+<p>H<sub>2</sub>O</p>
+```
+
+### `<sup>`
+
+Definiert hochgestellten Text (Superscript).
+
+**Wichtige Merkmale**: Wird oft für mathematische Exponenten oder Fußnotenverweise genutzt.
+
+```html
+<p>E = mc<sup>2</sup></p>
+```
+
+---
+
