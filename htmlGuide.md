@@ -874,3 +874,58 @@ Definiert hochgestellten Text (Superscript).
 
 ---
 
+## 13. Erweiterte Formular-Elemente
+
+### `<fieldset>`
+
+Gruppiert verwandte Elemente innerhalb eines Formulars, um sie logisch (und meist visuell durch einen Rahmen) zusammenzufassen.
+
+**Wichtige Merkmale**: Verbessert die Struktur und Barrierefreiheit komplexer Formulare.
+
+```html
+<fieldset>
+    <legend>Kontaktdaten</legend>
+    <input type="text" name="name">
+</fieldset>
+```
+
+### `<legend>`
+
+Definiert eine Überschrift für ein `<fieldset>`-Element.
+
+**Wichtige Merkmale**: Muss das erste Element innerhalb eines `<fieldset>` sein.
+
+```html
+<legend>Zahlungsinformationen</legend>
+```
+
+### `<datalist>`
+
+Enthält eine Liste von vordefinierten Optionen für ein `<input>`-Element (Auto-Vervollständigung).
+
+**Wichtige Merkmale**: Der Nutzer kann aus der Liste wählen oder einen eigenen Text tippen. Verknüpfung erfolgt über die `id` des Datalist und das `list`-Attribut des Inputs.
+
+```html
+<input list="browser-liste">
+<datalist id="browser-liste">
+    <option value="Chrome">
+    <option value="Firefox">
+</datalist>
+```
+
+### `<optgroup>`
+
+Gruppiert verwandte `<option>`-Elemente innerhalb eines `<select>`-Menüs.
+
+**Wichtige Merkmale**: Hilft bei der Übersichtlichkeit langer Dropdown-Listen.
+
+```html
+<select>
+    <optgroup label="Obst">
+        <option>Apfel</option>
+        <option>Banane</option>
+    </optgroup>
+</select>
+```
+
+---
