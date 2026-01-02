@@ -1017,3 +1017,130 @@ Bietet Fallback-Klammern für Browser, die Ruby-Annotationen nicht unterstützen
 
 ---
 
+## Vollständiges Beispiel mit erweiterten Tags
+
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erweiterte HTML-Beispiele</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        mark { background-color: yellow; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Erweiterte HTML-Elemente</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Interaktive FAQ</h2>
+            <details>
+                <summary>Was ist HTML5?</summary>
+                <p>HTML5 ist die <mark>neueste Version</mark> der Hypertext Markup Language.</p>
+            </details>
+        </section>
+
+        <section>
+            <h2>Code-Beispiel</h2>
+            <p>Verwenden Sie den Befehl <code>git commit</code> um Änderungen zu speichern.</p>
+            <pre><code>function hallo() {
+    console.log("Hallo Welt");
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Wissenschaftliche Formel</h2>
+            <p>Die Formel für Wasser ist H<sub>2</sub>O.</p>
+            <p>Einstein's Formel: E = mc<sup>2</sup></p>
+        </section>
+
+        <section>
+            <h2>Statistik mit Beschriftung</h2>
+            <figure>
+                <img src="chart.png" alt="Verkaufszahlen">
+                <figcaption>Abbildung 1: Verkaufsentwicklung 2025</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Fortschrittsanzeige</h2>
+            <p>Download-Fortschritt:</p>
+            <progress value="45" max="100">45%</progress>
+            <p>Festplatte belegt:</p>
+            <meter value="0.7" max="1">70%</meter>
+        </section>
+
+        <section>
+            <h2>Formular mit Gruppierung</h2>
+            <form>
+                <fieldset>
+                    <legend>Persönliche Daten</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" list="namen">
+                    <datalist id="namen">
+                        <option value="Max">
+                        <option value="Anna">
+                    </datalist>
+                </fieldset>
+                <button type="submit">Absenden</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Tabelle mit Struktur</h2>
+            <table>
+                <caption>Quartalsergebnis 2025</caption>
+                <thead>
+                    <tr>
+                        <th>Monat</th>
+                        <th>Umsatz</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Januar</td>
+                        <td>5.000 €</td>
+                    </tr>
+                    <tr>
+                        <td>Februar</td>
+                        <td>6.500 €</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Gesamt</td>
+                        <td>11.500 €</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section>
+            <h2>Zitat</h2>
+            <blockquote cite="https://example.com">
+                „Wissen ist Macht."
+            </blockquote>
+            <p>Quelle: <cite>Philosophie für Anfänger</cite></p>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            Kontakt: info@beispiel.de<br>
+            Musterstraße 123, 12345 Musterstadt
+        </address>
+        <p>Veröffentlicht am <time datetime="2025-12-31">31. Dezember 2025</time></p>
+    </footer>
+
+    <script>
+        console.log("Seite geladen");
+    </script>
+    <noscript>JavaScript ist deaktiviert.</noscript>
+</body>
+</html>
+```
