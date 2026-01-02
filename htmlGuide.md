@@ -988,6 +988,8 @@ Gruppiert die Zusammenfassungs- oder Fußzeilen einer Tabelle.
 ### `<ruby>`
 
 Wird verwendet, um asiatische Schriftzeichen mit kleinen Aussprachehilfen (Annotationen) zu versehen.
+**Hinweis**: Nicht zu verwechseln mit der Programmiersprache **Ruby**!!!  
+In HTML bezeichnet `<ruby>` ein Typografie-Element, das zur Darstellung von Aussprachehilfen dient — insbesondere in Sprachen wie Japanisch oder Chinesisch.
 
 **Wichtige Merkmale**: Container für `<rt>` und `<rp>`.
 
@@ -999,20 +1001,21 @@ Wird verwendet, um asiatische Schriftzeichen mit kleinen Aussprachehilfen (Annot
 
 Gibt die Aussprache oder Erklärung der Zeichen innerhalb eines `<ruby>`-Elements an.
 
-**Wichtige Merkmale**: Erscheint meist klein über dem Hauptzeichen.
+**Wichtige Merkmale:** Erscheint meist klein über oder neben dem Hauptzeichen (je nach Sprache und Layout).
 
 ```html
-<rt>Aussprachehilfe</rt>
+<ruby>漢 <rt>kan</rt></ruby>
 ```
 
 ### `<rp>`
 
 Bietet Fallback-Klammern für Browser, die Ruby-Annotationen nicht unterstützen.
+Wichtige Merkmale: Inhalt wird nur angezeigt, wenn der Browser <ruby> nicht versteht, z. B. Klammern um die Aussprache.
 
 **Wichtige Merkmale**: Inhalt wird nur angezeigt, wenn der Browser `<ruby>` nicht versteht.
 
 ```html
-<rp>(</rp><rt>kan</rt><rp>)</rp>
+<ruby>漢<rp>(</rp><rt>kan</rt><rp>)</rp></ruby>
 ```
 
 ---
