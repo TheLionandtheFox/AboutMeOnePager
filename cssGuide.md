@@ -122,3 +122,180 @@ p { color: red; }  /* Diese Regel gewinnt */
 ```
 
 ---
+
+## 1. Selektoren
+
+Selektoren bestimmen, welche HTML-Elemente gestylt werden. Größstenteils können die Namen für die Selektoren frei vergeben werden.
+Man muss darauf achten, dass der Name der Selektoren deutlich und klar ist. Am besten keine kryptischen zahlen oder Buchstabenfolge.
+Es sind keine Umlaute (ä, ö, ü) und keine Sonderzeichen (wie ß, !, ?, #, %, &) erlaubt (außer Bindestrich und Unterstrich), sie müssen case-sensitiv sein (Groß-/Kleinschreibung zählt), sollten funktionsbasiert benannt werden und können über Logische Pseudoklassen (:is(), :not()) kombiniert werden, wobei spezielle Regeln für Komplexität und Verschachtelung gelten. Wichtig ist auch die Spezifität bei Konflikten.
+Die grundlegenden HTML-Elemente und einige spezielle Selektoren (wie Pseudo-Elemente) sind festgelegt.
+
+### Universal-Selektor `*`
+
+Wählt **alle** Elemente aus.
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+}
+```
+
+### Element-Selektor
+
+Wählt alle Elemente eines bestimmten Typs aus. Sie sind vordefiniert.
+
+```css
+p {
+    color: blue;
+}
+
+h1 {
+    font-size: 32px;
+}
+```
+
+### Klassen-Selektor `.klassenname`
+
+Wählt alle Elemente mit einer bestimmten Klasse aus. Klassen können mehrfach verwendet werden.
+
+```html
+<p class="highlight">Dieser Text ist hervorgehoben</p>
+<button class="buttonred">Klick mich</button>
+```
+
+```css
+.highlight {
+    background-color: yellow;
+    color: blue;
+}
+
+.buttonred {
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+}
+```
+
+### ID-Selektor `#idname`
+
+Wählt ein Element mit einer bestimmten ID aus. IDs sollten **einmalig** pro Seite sein.
+
+```css
+#header {
+    background-color: navy;
+    color: white;
+}
+```
+
+```html
+<div id="header">Kopfbereich</div>
+```
+
+### Nachfahren-Selektor (Descendant)
+
+Wählt Elemente aus, die **innerhalb** eines anderen Elements liegen (auf beliebiger Ebene).
+
+```css
+div p {
+    color: green;
+}
+```
+
+Wählt alle `<p>` innerhalb von `<div>`.
+
+### Kind-Selektor (Child) `>`
+
+Wählt nur **direkte** Kinder eines Elements aus.
+
+```css
+div > p {
+    font-weight: bold;
+}
+```
+
+Wählt nur `<p>`, die direkte Kinder von `<div>` sind.
+
+### Geschwister-Selektor `+`
+
+Wählt das **erste** Element aus, das direkt nach einem anderen folgt.
+
+```css
+h2 + p {
+    margin-top: 0;
+}
+```
+
+Wählt das erste `<p>` nach einem `<h2>`.
+
+### Allgemeiner Geschwister-Selektor `~`
+
+Wählt **alle** Geschwister-Elemente aus, die nach einem Element kommen.
+
+```css
+h2 ~ p {
+    color: gray;
+}
+```
+
+### Attribut-Selektor
+
+Wählt Elemente basierend auf ihren Attributen aus.
+
+```css
+/* Element mit bestimmtem Attribut */
+input[type="text"] {
+    border: 1px solid gray;
+}
+
+/* Element mit Attribut, das einen Wert enthält */
+a[href*="google"] {
+    color: red;
+}
+```
+
+### Pseudo-Klassen
+
+Wählen Elemente in einem bestimmten Zustand aus.
+
+```css
+/* Link-Zustände */
+a:link { color: blue; }        /* Unbesuchter Link */
+a:visited { color: purple; }   /* Besuchter Link */
+a:hover { color: red; }        /* Maus darüber */
+a:active { color: orange; }    /* Beim Klicken */
+
+/* Andere häufige Pseudo-Klassen */
+input:focus { border-color: blue; }  /* Element hat Fokus */
+li:first-child { font-weight: bold; } /* Erstes Kind */
+li:last-child { border: none; }       /* Letztes Kind */
+p:nth-child(2) { color: red; }        /* Zweites Kind */
+```
+
+### Pseudo-Elemente
+
+Wählen einen bestimmten Teil eines Elements aus.
+
+```css
+/* Erster Buchstabe */
+p::first-letter {
+    font-size: 2em;
+    color: red;
+}
+
+/* Erste Zeile */
+p::first-line {
+    font-weight: bold;
+}
+
+/* Inhalt vor/nach Element einfügen */
+p::before {
+    content: "→ ";
+}
+
+p::after {
+    content: " ←";
+}
+```
+
+---
