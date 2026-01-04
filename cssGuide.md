@@ -256,6 +256,69 @@ h2 ~ p {
 Hier werden „Absatz 1“ und „Absatz 2“ beide ausgewählt,
 weil sie beide nach dem `<h2>` im selben Elternelement vorkommen.
 Nochmal zum verdeutlichen:
-`+` → nur den direkt folgenden Nachbarn
+
+`+` → nur den direkt folgenden Nachbarn;
+
 `~` → alle nachfolgenden Geschwister
 
+### Attribut-Selektor
+
+Wählt Elemente basierend auf ihren Attributen aus.
+
+```css
+/* Element mit bestimmtem Attribut */
+input[type="text"] {
+    border: 1px solid gray;
+}
+
+/* Element mit Attribut, das einen Wert enthält */
+a[href*="google"] {
+    color: red;
+}
+```
+
+### Pseudo-Klassen
+
+Wählen Elemente in einem bestimmten Zustand aus.
+
+```css
+/* Link-Zustände */
+a:link { color: blue; }        /* Unbesuchter Link */
+a:visited { color: purple; }   /* Besuchter Link */
+a:hover { color: red; }        /* Maus darüber */
+a:active { color: orange; }    /* Beim Klicken */
+
+/* Andere häufige Pseudo-Klassen */
+input:focus { border-color: blue; }  /* Element hat Fokus */
+li:first-child { font-weight: bold; } /* Erstes Kind */
+li:last-child { border: none; }       /* Letztes Kind */
+p:nth-child(2) { color: red; }        /* Zweites Kind */
+```
+
+### Pseudo-Elemente
+
+Wählen einen bestimmten Teil eines Elements aus.
+
+```css
+/* Erster Buchstabe */
+p::first-letter {
+    font-size: 2em;
+    color: red;
+}
+
+/* Erste Zeile */
+p::first-line {
+    font-weight: bold;
+}
+
+/* Inhalt vor/nach Element einfügen */
+p::before {
+    content: "→ ";
+}
+
+p::after {
+    content: " ←";
+}
+```
+
+---
