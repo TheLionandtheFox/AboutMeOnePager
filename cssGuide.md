@@ -322,7 +322,7 @@ Wählt alle `<a>` -Elemente aus, deren Attribut href irgendwo „google“ enth�
 
 ---
 
-### Pseudo-Klassen (`:`)
+### 1. Pseudo-Klassen (`:`)
 
 Pseudo-Klassen werden verwendet, um Elemente abhängig von ihrem **Zustand** oder ihrer **Position** anzusprechen, ohne dass man dafür extra Klassen im HTML schreiben musst. Sie eignen sich besonders gut, um auf Benutzerinteraktionen zu reagieren (z. B. Maus darüber, Klick, Fokus) oder bestimmte Elemente innerhalb von Listen, Formularen oder Textbereichen gezielt zu gestalten.
 
@@ -372,7 +372,7 @@ img:hover {
     transform: scale(1.05);
 }
 
-a:active { color: orange; }    /*Beim Klicken*/
+a:active { color: orange; }    /*im Moment des Klicks (während die Maustaste gedrückt ist)*/
 
 /* Andere häufige Pseudo-Klassen */
 input:focus { border-color: blue; }  /* Element hat Fokus */
@@ -381,9 +381,18 @@ li:last-child { border: none; }       /* Letztes Kind */
 p:nth-child(2) { color: red; }        /* Zweites Kind */
 ```
 
-### Pseudo-Elemente
+**Wichtig:** Die Reihenfolge bei Links muss sein: **L**o**V**e **HA**te
 
-Pseudo-Elemente werden verwendet, um bestimmte Teile eines Elements oder künstlich eingefügten Inhalt zu stylen, der im HTML nicht als eigenes Tag vorhanden ist. Typische Beispiele sind der erste Buchstabe, die erste Zeile eines Textes oder zusätzlicher Inhalt vor bzw. nach einem Element.
+- `:link`
+- `:visited`
+- `:hover`
+- `:active`
+
+Anders funktioniert es nicht richtig wegen der CSS-Kaskade!
+
+### 2. Pseudo-Elemente (`::`)
+
+Pseudo-Elemente sprechen **Teile** von Elementen an oder fügen **virtuellen Inhalt** hinzu, der im HTML nicht existiert. Sie werden verwendet, um bestimmte Teile eines Elements oder künstlich eingefügten Inhalt zu stylen, der im HTML nicht als eigenes Tag vorhanden ist. Typische Beispiele sind der erste Buchstabe, die erste Zeile eines Textes oder zusätzlicher Inhalt vor bzw. nach einem Element.
 
 ```css
 /* Erster Buchstabe */
