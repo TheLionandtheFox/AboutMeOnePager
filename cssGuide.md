@@ -306,16 +306,73 @@ Wählt alle `<a>` -Elemente aus, deren Attribut href irgendwo „google“ enth�
 | `[attr^="anfang"]` | Beginnt mit | `[class^="btn-"]` | Wählt alle Elemente, deren Attributwert mit „btn-“ beginnt |
 | `[attr$="ende"]` | Endet mit | `[src$=".jpg"]` | Wählt alle Elemente, deren Attributwert auf „.jpg“ endet |
 
-### Pseudo-Klassen
+## Pseudo-Klassen und Pseudo-Elemente
 
-Wählen Elemente in einem bestimmten Zustand aus.
+### Der Unterschied zwischen Pseudo-Klassen und Pseudo-Elementen
+
+**Einfach gesagt:**
+
+- **Pseudo-Klassen** (`:`) sprechen **ganze Elemente** in einem bestimmten **Zustand** an
+- **Pseudo-Elemente** (`::`) sprechen **Teile** von Elementen an oder fügen **virtuellen Inhalt** hinzu
+
+**Merkhilfe:**
+
+- Pseudo-Klassen haben **einen** Doppelpunkt: `:hover`
+- Pseudo-Elemente haben **zwei** Doppelpunkte: `::before`
+
+---
+
+### Pseudo-Klassen (`:`)
+
+Pseudo-Klassen werden verwendet, um Elemente abhängig von ihrem **Zustand** oder ihrer **Position** anzusprechen, ohne dass man dafür extra Klassen im HTML schreiben musst. Sie eignen sich besonders gut, um auf Benutzerinteraktionen zu reagieren (z. B. Maus darüber, Klick, Fokus) oder bestimmte Elemente innerhalb von Listen, Formularen oder Textbereichen gezielt zu gestalten.
 
 ```css
 /* Link-Zustände */
 a:link { color: blue; }        /* Unbesuchter Link */
 a:visited { color: purple; }   /* Besuchter Link */
-a:hover { color: red; }        /* Maus darüber */
-a:active { color: orange; }    /* Beim Klicken */
+```
+
+**Wichtig:** Aus Sicherheitsgründen können nur wenige Eigenschaften geändert werden (color, background-color, border-color).
+
+**Beispiel-Szenario:** Du möchtest, dass besuchte Links eine andere Farbe haben, damit Nutzer sehen, welche Seiten sie schon kennen.
+
+```css
+a:hover { color: red; }        /* Wird aktiv, wenn der Benutzer mit der Maus über das Element fährt. */
+```
+
+**Funktioniert nicht nur bei Links!** Du kannst `:hover` auf fast alle Elemente anwenden:
+
+```css
+button:hover {
+    background-color: lightblue;
+    transform: scale(1.1);
+}
+
+div:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+img:hover {
+    opacity: 0.7;
+}
+```
+
+**Praxis-Beispiel:** Ein Button, der beim Drüberfahren größer wird
+
+```css
+.button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background-color: darkblue;
+    transform: scale(1.05);
+}
+
+a:active { color: orange; }    /*Beim Klicken*/
 
 /* Andere häufige Pseudo-Klassen */
 input:focus { border-color: blue; }  /* Element hat Fokus */
@@ -326,7 +383,7 @@ p:nth-child(2) { color: red; }        /* Zweites Kind */
 
 ### Pseudo-Elemente
 
-Wählen einen bestimmten Teil eines Elements aus.
+Pseudo-Elemente werden verwendet, um bestimmte Teile eines Elements oder künstlich eingefügten Inhalt zu stylen, der im HTML nicht als eigenes Tag vorhanden ist. Typische Beispiele sind der erste Buchstabe, die erste Zeile eines Textes oder zusätzlicher Inhalt vor bzw. nach einem Element.
 
 ```css
 /* Erster Buchstabe */
