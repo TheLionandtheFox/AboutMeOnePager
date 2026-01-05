@@ -296,16 +296,15 @@ a[href*="google"] {
 
 Wählt alle `<a>` -Elemente aus, deren Attribut href irgendwo „google“ enthält
 
-**Kurz erklärt:**
+**Übersicht:**
 
 | Syntax | Bedeutung | Beispiel | Beschreibung |
-|---------|------------|-----------|---------------|
+| --------- | ------------ | ----------- | --------------- |
 | `[attr]` | Hat dieses Attribut | `[disabled]` | Wählt alle Elemente mit dem Attribut `disabled` aus |
 | `[attr="wert"]` | Exakter Wertvergleich | `[type="text"]` | Wählt nur Elemente, deren Attribut exakt `text` ist |
 | `[attr*="teil"]` | Enthält Teilzeichenkette | `[href*="google"]` | Wählt alle Elemente, deren Attribut den Text „google“ enthält |
 | `[attr^="anfang"]` | Beginnt mit | `[class^="btn-"]` | Wählt alle Elemente, deren Attributwert mit „btn-“ beginnt |
 | `[attr$="ende"]` | Endet mit | `[src$=".jpg"]` | Wählt alle Elemente, deren Attributwert auf „.jpg“ endet |
-
 
 ### Pseudo-Klassen
 
