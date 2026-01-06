@@ -518,12 +518,214 @@ input:enabled {
 
 ---
 
+### Positions-basierte Pseudo-Klassen (Kinder)
+
+Diese Pseudo-Klassen wählen Elemente basierend auf ihrer **Position** innerhalb des Elternelements aus.
+
+#### `:first-child` - Erstes Kind
+
+Wählt ein Element aus, wenn es das **erste Kind** seines Elternelements ist.
 
 ```css
-li:first-child { font-weight: bold; } /* Erstes Kind */
-li:last-child { border: none; }       /* Letztes Kind */
-p:nth-child(2) { color: red; }        /* Zweites Kind */
+li:first-child {
+    font-weight: bold;
+    color: red;
+}
 ```
+
+```html
+<ul>
+    <li>Erstes Element (wird rot und fett)</li>
+    <li>Zweites Element</li>
+    <li>Drittes Element</li>
+</ul>
+```
+
+**Wichtig:** Das Element muss wirklich das erste Kind sein!
+
+```html
+<!-- Funktioniert NICHT -->
+<ul>
+    <h3>Überschrift</h3>  <!-- h3 ist das erste Kind -->
+    <li>Erstes li</li>     <!-- Wird NICHT gestylt -->
+</ul>
+```
+
+---
+
+#### `:last-child` - Letztes Kind
+
+Wählt das letzte Kind aus.
+
+```css
+li:last-child {
+    border-bottom: none;
+}
+```
+
+**Praktisches Beispiel:** Bei einer Liste soll das letzte Element keinen unteren Rahmen haben
+
+```css
+.item {
+    border-bottom: 1px solid gray;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+```
+
+---
+
+#### `:nth-child(n)` - N-tes Kind
+
+Wählt das n-te Kind aus. **Sehr mächtig!**
+
+```css
+/* Zweites Element */
+li:nth-child(2) {
+    color: red;
+}
+
+/* Jedes ungerade Element (1, 3, 5, 7...) */
+li:nth-child(odd) {
+    background-color: lightgray;
+}
+
+/* Jedes gerade Element (2, 4, 6, 8...) */
+li:nth-child(even) {
+    background-color: white;
+}
+
+/* Jedes dritte Element (3, 6, 9, 12...) */
+li:nth-child(3n) {
+    font-weight: bold;
+}
+
+/* Jedes dritte Element ab dem zweiten (2, 5, 8, 11...) */
+li:nth-child(3n+2) {
+    color: blue;
+}
+
+/* Die ersten 3 Elemente */
+li:nth-child(-n+3) {
+    border: 2px solid red;
+}
+```
+
+**Zebra-Streifen für Tabellen:**
+
+```css
+tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+```
+
+---
+
+#### `:nth-last-child(n)` - N-tes Kind von hinten
+
+Zählt von hinten!
+
+```css
+/* Vorletztes Element */
+li:nth-last-child(2) {
+    color: orange;
+}
+
+/* Die letzten 3 Elemente */
+li:nth-last-child(-n+3) {
+    font-style: italic;
+}
+```
+
+---
+
+#### `:only-child` - Einziges Kind
+
+Wählt ein Element aus, wenn es das **einzige** Kind seines Elternelements ist.
+
+```css
+p:only-child {
+    text-align: center;
+}
+```
+
+```html
+<!-- Wird zentriert -->
+<div>
+    <p>Ich bin das einzige Kind</p>
+</div>
+
+<!-- Wird NICHT zentriert -->
+<div>
+    <p>Ich habe Geschwister</p>
+    <p>Ich auch</p>
+</div>
+```
+
+---
+
+### Typ-basierte Pseudo-Klassen
+
+Ähnlich wie die obigen, aber nur für **gleiche Element-Typen**.
+
+#### `:first-of-type` - Erster seines Typs
+
+Wählt das erste Element eines bestimmten Typs innerhalb des Elternelements.
+
+```css
+p:first-of-type {
+    font-size: 1.2em;
+}
+```
+
+```html
+<div>
+    <h2>Überschrift</h2>
+    <p>Erster Absatz (wird größer)</p>
+    <p>Zweiter Absatz</p>
+</div>
+```
+
+**Unterschied zu `:first-child`:** `:first-of-type` ignoriert andere Element-Typen!
+
+---
+
+#### `:last-of-type` - Letzter seines Typs
+
+```css
+p:last-of-type {
+    margin-bottom: 0;
+}
+```
+
+---
+
+#### `:nth-of-type(n)` - N-ter seines Typs
+
+```css
+/* Jeder zweite Absatz */
+p:nth-of-type(2n) {
+    background-color: yellow;
+}
+```
+
+---
+
+#### `:only-of-type` - Einziger seines Typs
+
+```css
+p:only-of-type {
+    font-weight: bold;
+}
+```
+
+---
 
 ### 2. Pseudo-Elemente (`::`)
 
