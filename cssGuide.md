@@ -326,15 +326,42 @@ Wählt alle `<a>` -Elemente aus, deren Attribut href irgendwo „google“ enth�
 
 Pseudo-Klassen werden verwendet, um Elemente abhängig von ihrem **Zustand** oder ihrer **Position** anzusprechen, ohne dass man dafür extra Klassen im HTML schreiben musst. Sie eignen sich besonders gut, um auf Benutzerinteraktionen zu reagieren (z. B. Maus darüber, Klick, Fokus) oder bestimmte Elemente innerhalb von Listen, Formularen oder Textbereichen gezielt zu gestalten.
 
+### Link-Zustände
+
+Diese Pseudo-Klassen funktionieren speziell bei Links (`<a>`-Elementen).
+
+#### `:link` - Unbesuchter Link
+
+Spricht Links an, die der Benutzer **noch nicht** besucht hat.
+
 ```css
 /* Link-Zustände */
 a:link { color: blue; }        /* Unbesuchter Link */
+```
+
+```html
+<a href="https://example.com">Dieser Link ist noch unbesucht</a>
+```
+
+**Wann wird es verwendet?** Für Links, die noch nicht im Browser-Verlauf sind.
+
+#### `:visited` - Besuchter Link
+
+Spricht Links an, die der Benutzer **bereits besucht** hat.
+
+```css
 a:visited { color: purple; }   /* Besuchter Link */
 ```
 
 **Wichtig:** Aus Sicherheitsgründen können nur wenige Eigenschaften geändert werden (color, background-color, border-color).
 
 **Beispiel-Szenario:** Du möchtest, dass besuchte Links eine andere Farbe haben, damit Nutzer sehen, welche Seiten sie schon kennen.
+
+---
+
+#### `:hover` - Maus darüber
+
+Wird aktiv, wenn der Benutzer mit der Maus **über** das Element fährt.
 
 ```css
 a:hover { color: red; }        /* Wird aktiv, wenn der Benutzer mit der Maus über das Element fährt. */
@@ -372,13 +399,18 @@ img:hover {
     transform: scale(1.05);
 }
 
+---
+
+#### `:active` - Beim Klicken
+
+Wird aktiv im **Moment des Klicks**.
+
+```css
 a:active { color: orange; }    /*im Moment des Klicks (während die Maustaste gedrückt ist)*/
 
-/* Andere häufige Pseudo-Klassen */
-input:focus { border-color: blue; }  /* Element hat Fokus */
-li:first-child { font-weight: bold; } /* Erstes Kind */
-li:last-child { border: none; }       /* Letztes Kind */
-p:nth-child(2) { color: red; }        /* Zweites Kind */
+button:active {
+    transform: scale(0.95);
+}
 ```
 
 **Wichtig:** Die Reihenfolge bei Links muss sein: **L**o**V**e **HA**te
@@ -389,6 +421,15 @@ p:nth-child(2) { color: red; }        /* Zweites Kind */
 - `:active`
 
 Anders funktioniert es nicht richtig wegen der CSS-Kaskade!
+
+### Andere häufige Pseudo-Klassen
+
+```css
+input:focus { border-color: blue; }  /* Element hat Fokus */
+li:first-child { font-weight: bold; } /* Erstes Kind */
+li:last-child { border: none; }       /* Letztes Kind */
+p:nth-child(2) { color: red; }        /* Zweites Kind */
+```
 
 ### 2. Pseudo-Elemente (`::`)
 
