@@ -930,16 +930,37 @@ Ergebnis: **Name**
 
 ---
 
-```css
-/* Erster Buchstabe */
-p::first-letter {
-    font-size: 2em;
-    color: red;
-}
+### `::first-letter` - Erster Buchstabe
 
+Stylt den **ersten Buchstaben** eines Elements.
+
+```css
+p::first-letter {
+    font-size: 3em;
+    font-weight: bold;
+    color: red;
+    float: left;
+    margin-right: 5px;
+}
+```
+
+**Ergebnis:** Klassischer "Drop Cap"-Effekt wie in Büchern
+
+```html
+<p>Dies ist ein langer Text, und der erste Buchstabe ist sehr groß.</p>
+```
+
+**Nur bei Block-Elementen!** Funktioniert nicht bei `display: inline`.
+
+**Erlaubte Eigenschaften:** Schrift, Farbe, Hintergrund, Margins, Padding, Border, Text-Decoration
+
+---
+
+```css
 /* Erste Zeile */
 p::first-line {
     font-weight: bold;
 }
+```
 
 ---
