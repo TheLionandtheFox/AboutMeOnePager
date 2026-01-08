@@ -1023,3 +1023,28 @@ input:focus::placeholder {
 ```
 
 ---
+
+## Kombination von Pseudo-Klassen und Pseudo-Elementen
+
+Du kannst beides kombinieren.
+
+```css
+/* ::before nur beim Hovern anzeigen */
+a:hover::before {
+    content: " →";
+}
+
+/* Erster Buchstabe des ersten Absatzes */
+p:first-of-type::first-letter {
+    font-size: 4em;
+    color: red;
+}
+
+/* ::after nur für besuchte Links */
+a:visited::after {
+    content: " ✓";
+    color: green;
+}
+```
+
+---
