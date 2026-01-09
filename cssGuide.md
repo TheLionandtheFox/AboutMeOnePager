@@ -1152,18 +1152,28 @@ a:visited::after {
 
 ## 2. Farben & Hintergründe
 
-### `color`
-
-Setzt die Textfarbe.
+Farben sind eines der wichtigsten Gestaltungsmittel im Webdesign. Sie beeinflussen die Stimmung, Lesbarkeit und Markenidentität einer Website. CSS bietet verschiedene Möglichkeiten, Farben zu definieren – von einfachen Farbnamen bis zu komplexen Farbräumen mit Transparenz. Ob über Namen, Hexa Zahlen, RGB usw. Es gibt viele Möglichkeiten Farben zu wählen.
 
 ```css
 p {
-    color: red;              /* Farbname */
+    color: red; /* Farbe rot */
     color: #ff0000;          /* Hexadezimal */
     color: rgb(255, 0, 0);   /* RGB */
     color: rgba(255, 0, 0, 0.5); /* RGB mit Transparenz */
 }
 ```
+
+### `color`
+
+Die `color`-Eigenschaft in CSS bestimmt die Farbe des Textes innerhalb eines Elements. Sie ist eine der am häufigsten verwendeten CSS-Eigenschaften und bildet die Grundlage für lesbare und ansprechende Typografie.
+
+```css
+p {
+    color: red; /* rote Farbe */
+}
+```
+
+Diese einfache Regel färbt den Text aller `<p>`-Elemente rot. Die `color`-Eigenschaft wird vererbt – das bedeutet, wenn man sie auf ein Elternelement setzt, erben alle Kindelemente diese Farbe, sofern sie nicht explizit überschrieben wird.
 
 ### `background-color`
 
