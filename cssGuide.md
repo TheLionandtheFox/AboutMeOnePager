@@ -1398,6 +1398,107 @@ Beispiel: `#3498db`
 
 ---
 
+### 4. RGBA (RGB mit Alpha/Transparenz)
+
+RGBA erweitert RGB um einen vierten Wert: den Alpha-Kanal für Transparenz. Alpha reicht von 0 (komplett transparent) bis 1 (komplett deckend).
+
+```css
+p {
+    color: rgba(255, 0, 0, 0.5);   /* Rotes Halbtransparent */
+    color: rgba(0, 0, 0, 0.8);     /* Fast deckend Schwarz */
+    color: rgba(255, 255, 255, 0.1); /* Fast transparent Weiß */
+}
+```
+
+**Syntax:**
+
+```css
+rgba(rot, grün, blau, alpha)
+```
+
+- **rot, grün, blau**: 0-255
+- **alpha**: 0.0 bis 1.0 (oder 0% bis 100%)
+
+**Alpha-Werte verstehen:**
+
+- `0` oder `0.0` = komplett transparent (unsichtbar)
+- `0.5` = 50% transparent (halbtransparent)
+- `1` oder `1.0` = komplett deckend (keine Transparenz)
+
+**Wichtiger Unterschied zu `opacity`:**
+
+`rgba()` macht nur die Farbe transparent, während `opacity` das gesamte Element samt Inhalt transparent macht:
+
+```css
+/* Nur der Hintergrund ist transparent */
+.box {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;  /* Text bleibt voll deckend */
+}
+
+/* Das GESAMTE Element wird transparent (inkl. Text!) */
+.box {
+    background-color: black;
+    opacity: 0.5;  /* Text wird auch transparent */
+}
+```
+
+**Praxis-Beispiele:**
+
+Beispiel 1: **Overlay über Bild**
+
+```css
+.image-overlay {
+    position: relative;
+}
+
+.image-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  /* Dunkles Overlay */
+}
+```
+
+Beispiel 2: **Glasmorphismus-Effekt**
+
+```css
+.glass-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+```
+
+Beispiel 3: **Sanfter Schatten mit Transparenz**
+
+```css
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 2px 4px rgba(0, 0, 0, 0.06);
+}
+```
+
+Die Transparenz ermöglicht es, dass Schatten natürlicher aussehen und sich an den Hintergrund anpassen.
+
+Beispiel 4: **Hover-Effekt mit Transparenz**
+
+```css
+.button {
+    background-color: rgb(52, 152, 219);
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: rgba(52, 152, 219, 0.8);
+}
+```
+
+---
+
 ### `background-image`
 
 Setzt ein Hintergrundbild.
