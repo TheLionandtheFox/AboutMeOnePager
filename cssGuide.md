@@ -1499,6 +1499,97 @@ Beispiel 4: **Hover-Effekt mit Transparenz**
 
 ---
 
+### 5. HSL (Hue, Saturation, Lightness)
+
+HSL ist ein alternatives Farbmodell, das für Menschen intuitiver ist als RGB. Es definiert Farben durch Farbton, Sättigung und Helligkeit.
+
+```css
+p {
+    color: hsl(0, 100%, 50%);     /* Rot */
+    color: hsl(120, 100%, 50%);   /* Grün */
+    color: hsl(240, 100%, 50%);   /* Blau */
+    color: hsl(0, 0%, 50%);       /* Grau */
+}
+```
+
+**Syntax:**
+
+```css
+hsl(hue, saturation, lightness)
+```
+
+**Die drei Komponenten erklärt:**
+
+1. **Hue (Farbton)**: 0-360 Grad auf dem Farbkreis
+   - 0° / 360° = Rot
+   - 60° = Gelb
+   - 120° = Grün
+   - 180° = Cyan
+   - 240° = Blau
+   - 300° = Magenta
+
+2. **Saturation (Sättigung)**: 0% bis 100%
+   - 0% = Graustufe (keine Farbe)
+   - 50% = Mäßig gesättigt
+   - 100% = Voll gesättigt (kräftige Farbe)
+
+3. **Lightness (Helligkeit)**: 0% bis 100%
+   - 0% = Schwarz
+   - 50% = Normale Farbe
+   - 100% = Weiß
+
+**Visualisierung:**
+
+```css
+/* Gleicher Farbton (Rot), unterschiedliche Sättigung */
+hsl(0, 100%, 50%)  /* Kräftiges Rot */
+hsl(0, 75%, 50%)   /* Weniger gesättigtes Rot */
+hsl(0, 50%, 50%)   /* Noch weniger gesättigt */
+hsl(0, 0%, 50%)    /* Grau (keine Sättigung) */
+
+/* Gleicher Farbton (Blau), unterschiedliche Helligkeit */
+hsl(240, 100%, 10%)  /* Sehr dunkles Blau */
+hsl(240, 100%, 30%)  /* Dunkles Blau */
+hsl(240, 100%, 50%)  /* Normal Blau */
+hsl(240, 100%, 70%)  /* Helles Blau */
+hsl(240, 100%, 90%)  /* Sehr helles Blau */
+```
+
+**Vorteile** von HSL:
+
+- Intuitiver für Menschen (man denkt eher in "Farbton" als in RGB-Werten)
+- Einfach, Farbvariationen zu erstellen (z.B. hellere/dunklere Versionen)
+- Perfekt für programmatische Farbgenerierung
+- Großartig für konsistente Farbpaletten
+
+Praxis-Beispiel: **Farbpalette generieren**
+
+```css
+:root {
+    --hue: 210;  /* Blau-Farbton */
+}
+
+.color-primary {
+    background-color: hsl(var(--hue), 80%, 50%);
+}
+
+.color-primary-light {
+    background-color: hsl(var(--hue), 80%, 70%);  /* Hellere Version */
+}
+
+.color-primary-dark {
+    background-color: hsl(var(--hue), 80%, 30%);  /* Dunklere Version */
+}
+
+.color-primary-pale {
+    background-color: hsl(var(--hue), 30%, 90%);  /* Sehr blass */
+}
+```
+
+Durch Änderung nur der `--hue`-Variable kann man die gesamte Farbpalette auf einen anderen Farbton umstellen!
+
+---
+
 ### `background-image`
 
 Setzt ein Hintergrundbild.
