@@ -1721,8 +1721,6 @@ div {
 
 **Box-Model und Hintergrundfarbe:**
 
-html```
-
 ┌─────────── Margin (transparent) ───────────┐
 │ ┌─────── Border ──────┐                    │
 │ │ ┌─── Padding ────┐  │ ← background-color │
