@@ -1625,6 +1625,22 @@ Praxis-Beispiel: **Dynamisches Theme mit Transparenz**
 
 ---
 
+## Moderne Farbformate (Bonus)
+
+### HWB (Hue, Whiteness, Blackness)
+
+Ein neueres, noch intuitiveres Format (seit 2021 in allen modernen Browsern):
+
+```css
+p {
+    color: hwb(0 0% 0%);      /* Reines Rot */
+    color: hwb(0 50% 0%);     /* Rot mit 50% Weiß gemischt */
+    color: hwb(0 0% 50%);     /* Rot mit 50% Schwarz gemischt */
+}
+```
+
+---
+
 ### `background-image`
 
 Setzt ein Hintergrundbild.
