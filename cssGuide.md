@@ -1671,6 +1671,8 @@ div {
 }
 ```
 
+**Wichtig zu verstehen:** Die Hintergrundfarbe füllt den gesamten Bereich des Elements, einschließlich Padding, aber nicht das Margin. Die Hintergrundfarbe erstreckt sich bis zum äußeren Rand des Borders.
+
 ### `background-image`
 
 Setzt ein Hintergrundbild.
@@ -1716,5 +1718,17 @@ div {
     background-repeat: repeat-y;   /* Nur vertikal */
 }
 ```
+
+**Box-Model und Hintergrundfarbe:**
+
+```
+
+┌─────────── Margin (transparent) ───────────┐
+│ ┌─────── Border ──────┐                    │
+│ │ ┌─── Padding ────┐  │ ← background-color │
+│ │ │   Content      │  │ ← füllt bis hier   │
+│ │ └────────────────┘  │                    │
+│ └─────────────────────┘                    │
+└────────────────────────────────────────────
 
 ---
