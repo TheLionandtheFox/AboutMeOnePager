@@ -1685,15 +1685,60 @@ Die Hintergrundfarbe füllt standardmäßig den gesamten Bereich des Elements, e
 
 ---
 
-### `background-image`
+### `background-image` - Hintergrundbild
 
-Setzt ein Hintergrundbild.
+Setzt ein oder mehrere Hintergrundbilder für ein Element.
 
 ```css
 body {
     background-image: url('bild.jpg');
 }
+
+.hero {
+    background-image: url('header-bg.png');
+}
+
+/* Relativer Pfad */
+.section {
+    background-image: url('../images/pattern.svg');
+}
+
+/* Absoluter Pfad */
+.banner {
+    background-image: url('https://example.com/image.jpg');
+}
 ```
+
+**Wichtige Hinweise:**
+
+1. **Pfade müssen in Anführungszeichen** stehen (einfach oder doppelt)
+2. **Relative Pfade** beziehen sich auf die CSS-Datei, nicht auf die HTML-Datei
+3. Das Bild wird **standardmäßig wiederholt** (gekachelt), wenn es kleiner als der Container ist
+4. Wenn das Bild nicht geladen werden kann, wird die `background-color` sichtbar (falls gesetzt)
+
+**Mehrere Bilder übereinander:**
+
+```css
+.element {
+    background-image: url('overlay.png'), url('main-bg.jpg');
+    /* Das erste Bild liegt oben, das zweite darunter */
+}
+```
+
+**SVG als Hintergrund:**
+
+```css
+.icon {
+    background-image: url('data:image/svg+xml,<svg>...</svg>');
+}
+
+/* Oder als Datei */
+.pattern {
+    background-image: url('pattern.svg');
+}
+```
+
+---
 
 ### `background-size`
 
