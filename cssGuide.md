@@ -1643,19 +1643,15 @@ p {
 
 ## Teil 2: Hintergründe
 
-Hintergründe sind ein essentielles Gestaltungselement in CSS. Sie können einfarbig sein, Bilder enthalten, Verläufe verwenden oder aus mehreren Schichten bestehen.
+Hintergründe sind eines der vielseitigsten Gestaltungsmittel in CSS. Sie können weit mehr als nur einfarbig oder mit einem Bild sein – von komplexen Verläufen über mehrschichtige Designs bis hin zu Mischmodi und Animationen. Dieser Guide deckt alle Aspekte von CSS-Hintergründen ab.
 
-### `background` (Kurzform)
+---
 
-```css
-div {
-    background: #f0f0f0 url('bild.jpg') no-repeat center/cover;
-}
-```
+## Grundlegende Background-Eigenschaften
 
 ### `background-color` - Hintergrundfarbe
 
-Die `background-color`-Eigenschaft setzt eine solide Hintergrundfarbe für ein Element. Sie akzeptiert alle Farbformate, die wir bereits besprochen haben.
+Die `background-color`-Eigenschaft setzt eine solide Hintergrundfarbe für ein Element. Sie akzeptiert alle CSS-Farbformate (Named Colors, Hex, RGB, HSL, etc.).
 
 ```css
 div {
@@ -1671,7 +1667,23 @@ div {
 }
 ```
 
-**Wichtig zu verstehen:** Die Hintergrundfarbe füllt den gesamten Bereich des Elements, einschließlich Padding, aber nicht das Margin. Die Hintergrundfarbe erstreckt sich bis zum äußeren Rand des Borders.
+**Box-Model und Hintergrundfarbe:**
+
+Die Hintergrundfarbe füllt standardmäßig den gesamten Bereich des Elements, einschließlich Padding, aber **nicht** das Margin. Sie erstreckt sich bis zum äußeren Rand des Borders.
+
+```
+┌─────────── Margin (transparent) ───────────┐
+│ ┌─────── Border ──────┐                    │
+│ │ ┌─── Padding ────┐  │ ← background-color │
+│ │ │   Content      │  │ ← füllt bis hier   │
+│ │ └────────────────┘  │                    │
+│ └─────────────────────┘                    │
+└────────────────────────────────────────────┘
+```
+
+**Wichtig:** Wenn man auch ein `background-image` setzt, liegt die Farbe **unter** dem Bild. Sie wird sichtbar, wenn das Bild transparent ist oder nicht den gesamten Bereich abdeckt.
+
+---
 
 ### `background-image`
 
@@ -1722,7 +1734,6 @@ div {
 **Box-Model und Hintergrundfarbe:**
 
 ```
-
 ┌─────────── Margin (transparent) ───────────┐
 │ ┌─────── Border ──────┐                    │
 │ │ ┌─── Padding ────┐  │ ← background-color │
