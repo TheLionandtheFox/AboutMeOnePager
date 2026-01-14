@@ -1899,17 +1899,106 @@ background-position: left 5% top 10%;
 
 ---
 
-### `background-repeat`
+### `background-repeat` - Wiederholung des Hintergrundbilds
 
 Steuert die Wiederholung des Hintergrundbilds.
 
 ```css
 div {
     background-repeat: no-repeat;  /* Keine Wiederholung */
+    background-repeat: repeat;     /* In beide Richtungen (Standard) */
     background-repeat: repeat-x;   /* Nur horizontal */
     background-repeat: repeat-y;   /* Nur vertikal */
+    background-repeat: space;      /* Mit Abständen, ohne Abschneiden */
+    background-repeat: round;      /* Strecken, um ohne Abschneiden zu kacheln */
 }
 ```
+
+**Die verschiedenen Werte im Detail:**
+
+#### `no-repeat` - Keine Wiederholung
+
+```css
+.hero {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+```
+
+Das Bild wird nur einmal angezeigt, unabhängig von der Größe des Containers.
+
+#### `repeat` - Standardverhalten
+
+```css
+.pattern {
+    background-image: url('tile.png');
+    background-repeat: repeat;  /* Standard, kann weggelassen werden */
+}
+```
+
+Das Bild wird horizontal und vertikal wiederholt, um den gesamten Container zu füllen. Am Rand kann das Bild abgeschnitten werden.
+
+#### `repeat-x` - Nur horizontal
+
+```css
+.stripe {
+    background-image: url('stripe.png');
+    background-repeat: repeat-x;
+}
+```
+
+**Anwendungsfall:** Horizontale Muster, Trennlinien, dekorative Streifen.
+
+#### `repeat-y` - Nur vertikal
+
+```css
+.sidebar {
+    background-image: url('vertical-pattern.png');
+    background-repeat: repeat-y;
+}
+```
+
+**Anwendungsfall:** Vertikale Muster, Seitenleisten-Dekorationen.
+
+#### `space` - Mit gleichmäßigen Abständen
+
+```css
+.grid {
+    background-image: url('dot.png');
+    background-repeat: space;
+}
+```
+
+**Verhalten:**
+- Bilder werden wiederholt, aber **nicht abgeschnitten**
+- Zwischen den Bildern entstehen **gleichmäßige Abstände**
+- Wenn nur ein Bild passt, wird es zentriert
+
+#### `round` - Strecken für perfekte Kachelung
+
+```css
+.tiles {
+    background-image: url('tile.png');
+    background-repeat: round;
+}
+```
+
+**Verhalten:**
+- Bilder werden leicht **gestreckt oder gestaucht**
+- So dass sie **ohne Abschneiden** perfekt kacheln
+- Das Seitenverhältnis kann sich ändern
+
+**Zwei-Wert-Syntax:**
+
+```css
+/* Horizontal und vertikal unterschiedlich */
+background-repeat: repeat-x no-repeat;  /* Nur horizontal */
+background-repeat: no-repeat repeat-y;  /* Nur vertikal */
+background-repeat: space round;         /* Horizontal space, vertikal round */
+```
+
+---
 
 **Box-Model und Hintergrundfarbe:**
 
