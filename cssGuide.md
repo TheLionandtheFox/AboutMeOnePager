@@ -2064,17 +2064,56 @@ Der Hintergrund ist fest mit dem Element verbunden. Wenn man die Seite scrollt, 
 
 Typografie ist eines der wichtigsten Elemente im Webdesign. Gut gestalteter Text verbessert die Lesbarkeit, vermittelt Persönlichkeit und beeinflusst die Benutzererfahrung maßgeblich. CSS bietet umfangreiche Möglichkeiten zur Textgestaltung – von grundlegenden Schriftarten bis zu modernen typografischen Features.
 
-### `font-family`
+---
 
-Legt die Schriftart fest.
+## Teil 1: Schriftarten (Font Properties)
+
+### `font-family` - Schriftart festlegen
+
+Die `font-family`-Eigenschaft bestimmt, welche Schriftart für Text verwendet wird. Sie ist eine der fundamentalsten typografischen Eigenschaften.
 
 ```css
 p {
     font-family: Arial, sans-serif;
+}
+
+h1 {
     font-family: 'Times New Roman', serif;
+}
+
+code {
     font-family: 'Courier New', monospace;
 }
 ```
+
+Grundprinzip: **Font Stack (Fallback-Kette)**
+
+Man definiert mehrere Schriftarten in einer Prioritätsliste. Der Browser verwendet die erste verfügbare Schrift:
+
+```css
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+```
+
+**Reihenfolge:**
+
+1. `'Helvetica Neue'` – Präferierte Schrift
+2. `Helvetica` – Fallback 1
+3. `Arial` – Fallback 2
+4. `sans-serif` – Generischer Fallback (Browser wählt)
+
+**Wichtig:** Schriftnamen mit Leerzeichen müssen in Anführungszeichen stehen:
+
+```css
+/* Richtig */
+font-family: 'Times New Roman', serif;
+font-family: "Courier New", monospace;
+
+/* Falsch */
+font-family: Times New Roman, serif;  /* Syntax-Fehler! */
+
+---
 
 ### `font-size`
 
