@@ -2060,6 +2060,10 @@ Der Hintergrund ist fest mit dem Element verbunden. Wenn man die Seite scrollt, 
 
 ## 3. Text & Schrift
 
+## Einführung
+
+Typografie ist eines der wichtigsten Elemente im Webdesign. Gut gestalteter Text verbessert die Lesbarkeit, vermittelt Persönlichkeit und beeinflusst die Benutzererfahrung maßgeblich. CSS bietet umfangreiche Möglichkeiten zur Textgestaltung – von grundlegenden Schriftarten bis zu modernen typografischen Features.
+
 ### `font-family`
 
 Legt die Schriftart fest.
