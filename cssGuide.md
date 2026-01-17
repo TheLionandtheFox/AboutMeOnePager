@@ -2176,6 +2176,20 @@ code, pre {
 
 **Anwendungsfall:** Code-Blöcke, Terminal-Output, Tabellen mit Zahlen
 
+#### 4. `cursive` - Schreibschriften
+
+Schriften, die Handschrift imitieren.
+
+```css
+.signature {
+    font-family: 'Brush Script MT', cursive;
+}
+```
+
+**Anwendungsfall:** Unterschriften, dekorative Überschriften (sparsam einsetzen!)
+
+
+
 ---
 
 ### `font-size`
