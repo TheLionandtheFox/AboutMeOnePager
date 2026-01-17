@@ -2137,8 +2137,6 @@ Schriften mit kleinen "Füßchen" an den Buchstabenenden. Wirken traditionell, s
 
 **Anwendungsfall:** Lange Texte, Artikel, formelle Dokumente, Print-Design-Ästhetik
 
----
-
 #### 2. `sans-serif` - Serifenlose Schriften
 
 Schriften ohne Verzierungen. Wirken modern, klar, sachlich.
@@ -2150,6 +2148,7 @@ body {
 ```
 
 **Typische Sans-Serif-Schriften:**
+
 - Arial
 - Helvetica
 - Verdana
@@ -2157,6 +2156,25 @@ body {
 - Open Sans
 
 **Anwendungsfall:** Moderne Websites, UI-Elemente, Bildschirm-Lesbarkeit
+
+#### 3. `monospace` - Dicktengleiche Schriften
+
+Jeder Buchstabe hat die gleiche Breite. Typisch für Code und technische Texte.
+
+```css
+code, pre {
+    font-family: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+```
+
+**Typische Monospace-Schriften:**
+
+- Courier New
+- Consolas
+- Monaco
+- Fira Code (mit Ligaturen)
+
+**Anwendungsfall:** Code-Blöcke, Terminal-Output, Tabellen mit Zahlen
 
 ---
 
@@ -2173,7 +2191,7 @@ p {
 }
 ```
 
-### `font-weight`
+#### `font-weight`
 
 Steuert die Schriftstärke (Fettdruck).
 
@@ -2185,7 +2203,7 @@ p {
 }
 ```
 
-### `font-style`
+#### `font-style`
 
 Setzt den Schriftstil.
 
@@ -2197,7 +2215,7 @@ p {
 }
 ```
 
-### `text-align`
+#### `text-align`
 
 Richtet Text horizontal aus.
 
@@ -2210,7 +2228,7 @@ p {
 }
 ```
 
-### `text-decoration`
+#### `text-decoration`
 
 Fügt Textdekorationen hinzu oder entfernt sie.
 
@@ -2222,7 +2240,7 @@ a {
 }
 ```
 
-### `text-transform`
+#### `text-transform`
 
 Ändert die Groß-/Kleinschreibung.
 
@@ -2234,7 +2252,7 @@ p {
 }
 ```
 
-### `line-height`
+#### `line-height`
 
 Bestimmt die Zeilenhöhe.
 
@@ -2245,7 +2263,7 @@ p {
 }
 ```
 
-### `letter-spacing`
+#### `letter-spacing`
 
 Steuert den Abstand zwischen Buchstaben.
 
@@ -2256,7 +2274,7 @@ h1 {
 }
 ```
 
-### `word-spacing`
+#### `word-spacing`
 
 Steuert den Abstand zwischen Wörtern.
 
@@ -2266,7 +2284,7 @@ p {
 }
 ```
 
-### `text-shadow`
+#### `text-shadow`
 
 Fügt einen Schatten zum Text hinzu.
 
